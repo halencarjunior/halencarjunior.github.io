@@ -116,6 +116,51 @@ First of all, it’s good to say that you should not run this kind of tool on se
 
 <p>Gotcha! Session 1 was opened after msf discover the password.</p>
 
+<h2 id="thc-hydra">THC Hydra</h2>
+
+<p><em>Number one of the biggest security holes are passwords, as every password security study shows. This tool is a proof of concept code, to give researchers and security consultants the possibility to show how easy it would be to gain unauthorized access from remote to a system. There are already several login hacker tools available, however, none does either support more than one protocol to attack or support parallelized connects.</em> copied from his <a href="https://github.com/vanhauser-thc/thc-hydra">github</a></p>
+
+<p>Accordingly author, the hydra could work well on Linux, Windows/Cygwin, Solaris, FreeBSD/OpenBSD, QNX (Blackberry 10) and MacOS.
+If you are using Kali Linux the tool is already installed.</p>
+
+<p><img src="/assets/img/hydra01.png" alt="THC Hydra" /></p>
+
+<p>Well, the hydra command for brute force testing on SSH service looks like this:</p>
+
+<p>hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.56.13 ssh</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-l : Name of user to be tested
+
+-P : wordlist to be used for test
+
+192.168.56.13 : server IP address
+
+ssh : service to be tested
+</code></pre></div></div>
+
+<p>Let’s test using hydra command</p>
+
+<p><img src="/assets/img/hydra02.png" alt="THC Hydra" /></p>
+
+<p>Well, it works!</p>
+
+<h2 id="nmap">NMAP</h2>
+
+<p><em>Nmap (“Network Mapper”) is a free and open source (license) utility for network discovery and security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. It was designed to rapidly scan large networks, but works fine against single hosts. Nmap runs on all major computer operating systems, and official binary packages are available for Linux, Windows, and Mac OS X. In addition to the classic command-line Nmap executable, the Nmap suite includes an advanced GUI and results viewer (Zenmap), a flexible data transfer, redirection, and debugging tool (Ncat), a utility for comparing scan results (Ndiff), and a packet generation and response analysis tool (Nping).</em></p>
+
+<p>We can use nmap scripts to do some more advanced scans in servers for vulnerabilities and even brute force. For this one we will use the ssh-brute nse script to achieve our objective.</p>
+
+<p><img src="/assets/img/nmap01.png" alt="Nmap" /></p>
+
+<p>For this test i’ve create two files (users.txt and pass.txt) filled with admin user and the other with a little part of rockyou.txt wordlist to be faster since we do not have the STOP on SUCCESS option and verbose are always visible, making some noise display of results.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap 192.168.56.13 -p 22 --script ssh-brute --script-args userdb=users.txt,passdb=pass.txt
+</code></pre></div></div>
+
+<p><img src="/assets/img/nmap02.png" alt="Nmap" /></p>
+
+<p>You can have more details at <a href="https://nmap.org/nsedoc/scripts/ssh-brute.html">nmap’s script URL</a></p>
+
 
 
       </section>
