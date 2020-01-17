@@ -152,7 +152,7 @@ ssh : service to be tested
 
 <p><img src="/assets/img/nmap01.png" alt="Nmap" /></p>
 
-<p>For this test i’ve create two files (users.txt and pass.txt) filled with admin user and the other with a little part of rockyou.txt wordlist to be faster since we do not have the STOP on SUCCESS option and verbose are always visible, making some noise display of results.</p>
+<p>For this test i’ve created two files (users.txt and pass.txt), filled with admin user and the other with a little part of rockyou.txt wordlist to be faster since we do not have the STOP on SUCCESS option and verbose are always visible, making some noise display of results.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap 192.168.56.13 -p 22 --script ssh-brute --script-args userdb=users.txt,passdb=pass.txt
 </code></pre></div></div>
@@ -160,6 +160,23 @@ ssh : service to be tested
 <p><img src="/assets/img/nmap02.png" alt="Nmap" /></p>
 
 <p>You can have more details at <a href="https://nmap.org/nsedoc/scripts/ssh-brute.html">nmap’s script URL</a></p>
+
+<h2 id="medusa">Medusa</h2>
+
+<p><em>Medusa is intended to be a speedy, massively parallel, modular, login brute-forcer. The goal is to support as many services which allow remote authentication as possible.</em></p>
+
+<p>You can have more informations at <a href="http://foofus.net/goons/jmk/medusa/medusa.html">Medusa Website</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>medusa -h 192.168.56.13 -u admin -P /usr/share/wordlists/rockyou.txt -e s -M ssh
+
+-h Target hostname or IP
+-u username
+-P wordlist
+-e password checks (*n* No Password, *s* Passowrd=Username)
+-M name of the module to execute
+</code></pre></div></div>
+
+<p><img src="/assets/img/medusa01.png" alt="Medusa" /></p>
 
 
 
