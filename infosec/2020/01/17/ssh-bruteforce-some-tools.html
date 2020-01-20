@@ -165,7 +165,7 @@ ssh : service to be tested
 
 <p><em>Medusa is intended to be a speedy, massively parallel, modular, login brute-forcer. The goal is to support as many services which allow remote authentication as possible.</em></p>
 
-<p>You can have more informations at <a href="http://foofus.net/goons/jmk/medusa/medusa.html">Medusa Website</a></p>
+<p>You can have more information at <a href="http://foofus.net/goons/jmk/medusa/medusa.html">Medusa Website</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>medusa -h 192.168.56.13 -u admin -P /usr/share/wordlists/rockyou.txt -e s -M ssh
 
@@ -178,6 +178,22 @@ ssh : service to be tested
 
 <p><img src="/assets/img/medusa01.png" alt="Medusa" /></p>
 
+<h2 id="ncrack">Ncrack</h2>
+
+<p><em>Ncrack is a high-speed network authentication cracking tool. It was built to help companies secure their networks by proactively testing all their hosts and networking devices for poor passwords. Security professionals also rely on Ncrack when auditing their clients. Ncrack was designed using a modular approach, a command-line syntax similar to Nmap and a dynamic engine that can adapt its behaviour based on network feedback. It allows for rapid, yet reliable large-scale auditing of multiple hosts.</em></p>
+
+<p><a href="https://nmap.org/ncrack/">Ncrack’s Website</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ncrack --user admin -P /root/pass.txt ssh://192.168.56.13
+
+--user -&gt; username to test
+-P -&gt; wordlist
+</code></pre></div></div>
+
+<p><img src="/assets/img/ncrack01.png" alt="Ncrack" /></p>
+
+<p>That’s all for now folks!
+Thanks for reading.</p>
 
 
       </section>
