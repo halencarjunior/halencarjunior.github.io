@@ -23,15 +23,15 @@
 <meta property="og:title" content="How to brute force SSH - Some Tools" />
 <meta name="author" content="bt0" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Hello guys, in this topic I’ll show you some tools and their commands to start a bruteforce in SSH servers. Disclaimer: First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own." />
-<meta property="og:description" content="Hello guys, in this topic I’ll show you some tools and their commands to start a bruteforce in SSH servers. Disclaimer: First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own." />
+<meta name="description" content="Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers. Disclaimer: First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own." />
+<meta property="og:description" content="Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers. Disclaimer: First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own." />
 <link rel="canonical" href="http://localhost:4000/infosec/2020/01/17/ssh-bruteforce-some-tools.html" />
 <meta property="og:url" content="http://localhost:4000/infosec/2020/01/17/ssh-bruteforce-some-tools.html" />
 <meta property="og:site_name" content="bt0" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-01-17T00:00:00-03:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"How to brute force SSH - Some Tools","dateModified":"2020-01-17T00:00:00-03:00","datePublished":"2020-01-17T00:00:00-03:00","url":"http://localhost:4000/infosec/2020/01/17/ssh-bruteforce-some-tools.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/infosec/2020/01/17/ssh-bruteforce-some-tools.html"},"author":{"@type":"Person","name":"bt0"},"description":"Hello guys, in this topic I’ll show you some tools and their commands to start a bruteforce in SSH servers. Disclaimer: First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"How to brute force SSH - Some Tools","dateModified":"2020-01-17T00:00:00-03:00","datePublished":"2020-01-17T00:00:00-03:00","url":"http://localhost:4000/infosec/2020/01/17/ssh-bruteforce-some-tools.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/infosec/2020/01/17/ssh-bruteforce-some-tools.html"},"author":{"@type":"Person","name":"bt0"},"description":"Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers. Disclaimer: First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -64,7 +64,7 @@
   <small>tags: <em>infosec</em> - <em>pentest</em></small>
 
 
-<p>Hello guys, in this topic I’ll show you some tools and their commands to start a bruteforce in SSH servers.</p>
+<p>Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers.</p>
 
 <p>Disclaimer:
 First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own.<!--more--></p>
@@ -77,12 +77,12 @@ First of all, it’s good to say that you should not run this kind of tool on se
 
 <h2 id="our-target-and-stuffs">Our target and “Stuffs”</h2>
 
-<p>I’ve created an Virtualbox VM using Ubuntu 18.04 and installed the OpenSSH. After that, an user <em>admin</em> was added with a kwown password. We will also use a known wordlist to conduct our brute force.</p>
+<p>I’ve created an Virtualbox VM using Ubuntu 18.04 and installed the OpenSSH. After that, an user <em>admin</em> was added with a known password. We will also use a known wordlist to conduct our brute force.</p>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c"># useradd admin</span>
 <span class="c"># passwd admin (using the password "fuckyou")</span></code></pre></figure>
 
-<p>Testing our target usign user and password above:</p>
+<p>Testing our target using user and password above:</p>
 
 <p><img src="/assets/img/ssh.png" alt="SSH" /></p>
 
@@ -93,7 +93,7 @@ First of all, it’s good to say that you should not run this kind of tool on se
 <p>You can have more information about the Framework in the free Offensive Security course at:
 (https://www.offensive-security.com/metasploit-unleashed/)</p>
 
-<p>Let’s run metasploit to start the brute force in our virtual machine IP address (192.168.56.13).</p>
+<p>Let’s run Metasploit to start the brute force in our virtual machine IP address (192.168.56.13).</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ msfdb run
 
@@ -110,7 +110,7 @@ First of all, it’s good to say that you should not run this kind of tool on se
 
 <p><img src="/assets/img/metasploit03.png" alt="Metasploit" /></p>
 
-<p>We’ve used the rockyou wordlist to configure our brute force. Feel free to use your own wordlist or create a new one. Since we know the username (admin), we just set the password option to use a wordlist. We’ve also changed the threads number to 10 so the process will be faster (locally off course). We’ve setted STOP_ON_SUCCESS so it stops when the password is found. Now, time to RUN!</p>
+<p>We’ve used the rockyou wordlist to configure our brute force. Feel free to use your wordlist or create a new one. Since we know the username (admin), we just set the password option to use a wordlist. We’ve also changed the threads number to 10 so the process will be faster (locally of course). We’ve set STOP_ON_SUCCESS so it stops when the password is found. Now, time to RUN!</p>
 
 <p><img src="/assets/img/metasploit04.png" alt="Metasploit" /></p>
 
@@ -180,7 +180,7 @@ ssh : service to be tested
 
 <h2 id="ncrack">Ncrack</h2>
 
-<p><em>Ncrack is a high-speed network authentication cracking tool. It was built to help companies secure their networks by proactively testing all their hosts and networking devices for poor passwords. Security professionals also rely on Ncrack when auditing their clients. Ncrack was designed using a modular approach, a command-line syntax similar to Nmap and a dynamic engine that can adapt its behaviour based on network feedback. It allows for rapid, yet reliable large-scale auditing of multiple hosts.</em></p>
+<p><em>Ncrack is a high-speed network authentication cracking tool. It was built to help companies secure their networks by proactively testing all their hosts and networking devices for poor passwords. Security professionals also rely on Ncrack when auditing their clients. Ncrack was designed using a modular approach, a command-line syntax similar to Nmap and a dynamic engine that can adapt its behavior based on network feedback. It allows for rapid, yet reliable large-scale auditing of multiple hosts.</em></p>
 
 <p><a href="https://nmap.org/ncrack/">Ncrack’s Website</a></p>
 
