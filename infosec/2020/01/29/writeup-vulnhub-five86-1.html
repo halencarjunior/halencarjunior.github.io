@@ -23,15 +23,15 @@
 <meta property="og:title" content="Writeup - Vulnhub machine - Five86-1" />
 <meta name="author" content="bt0" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Hi guys, Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project. i’ve chose that machine because it’s intended to be a beginner challenge and it helps a lot to understand how Capture the Flag competitions are made." />
-<meta property="og:description" content="Hi guys, Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project. i’ve chose that machine because it’s intended to be a beginner challenge and it helps a lot to understand how Capture the Flag competitions are made." />
+<meta name="description" content="Hi guys, Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project. i’ve chosen that machine because it’s intended to be a beginner’s challenge and it helps a lot to understand how Capture the Flag competitions are made." />
+<meta property="og:description" content="Hi guys, Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project. i’ve chosen that machine because it’s intended to be a beginner’s challenge and it helps a lot to understand how Capture the Flag competitions are made." />
 <link rel="canonical" href="http://localhost:4000/infosec/2020/01/29/writeup-vulnhub-five86-1.html" />
 <meta property="og:url" content="http://localhost:4000/infosec/2020/01/29/writeup-vulnhub-five86-1.html" />
 <meta property="og:site_name" content="bt0" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-01-29T00:00:00-03:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"Writeup - Vulnhub machine - Five86-1","dateModified":"2020-01-29T00:00:00-03:00","datePublished":"2020-01-29T00:00:00-03:00","url":"http://localhost:4000/infosec/2020/01/29/writeup-vulnhub-five86-1.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/infosec/2020/01/29/writeup-vulnhub-five86-1.html"},"author":{"@type":"Person","name":"bt0"},"description":"Hi guys, Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project. i’ve chose that machine because it’s intended to be a beginner challenge and it helps a lot to understand how Capture the Flag competitions are made.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Writeup - Vulnhub machine - Five86-1","dateModified":"2020-01-29T00:00:00-03:00","datePublished":"2020-01-29T00:00:00-03:00","url":"http://localhost:4000/infosec/2020/01/29/writeup-vulnhub-five86-1.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/infosec/2020/01/29/writeup-vulnhub-five86-1.html"},"author":{"@type":"Person","name":"bt0"},"description":"Hi guys, Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project. i’ve chosen that machine because it’s intended to be a beginner’s challenge and it helps a lot to understand how Capture the Flag competitions are made.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -67,19 +67,19 @@
 <p>Hi guys,</p>
 
 <p>Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project.
-i’ve chose that machine because it’s intended to be a beginner challenge and it helps a lot to understand how Capture the Flag competitions are made.
+i’ve chosen that machine because it’s intended to be a beginner’s challenge and it helps a lot to understand how Capture the Flag competitions are made.
 <!--more--></p>
 <h2 id="vulnhub">Vulnhub</h2>
 
 <p><strong>Aim/Goal</strong></p>
 
-<p>To provide materials that allows anyone to gain practical ‘hands-on’ experience in digital security, computer software &amp; network administration.</p>
+<p>To provide materials that allow anyone to gain practical ‘hands-on’ experience in digital security, computer software &amp; network administration.</p>
 
 <p><a href="https://www.vulnhub.com/">Vunlnhub Site</a></p>
 
 <h2 id="about-our-target-machine">About our target machine</h2>
 
-<p><em>Description</em></p>
+<p><strong>Description</strong></p>
 
 <p>Five86-1 is another purposely built vulnerable lab with the intent of gaining experience in the world of penetration testing.</p>
 
@@ -98,17 +98,17 @@ Technical Information</p>
 
 <p>Installation is simple - download it, unzip it, and then import it into VirtualBox or VMWare and away you go.</p>
 
-<p><em>Important</em></p>
+<p><strong>Important</strong></p>
 
 <p>While there should be no problems using this VM, by downloading it, you accept full responsibility for any unintentional damage that this VM may cause.</p>
 
 <p>In saying that, there shouldn’t be any problems, but I feel the need to throw this out there just in case.</p>
 
-<p><em>Credits</em></p>
+<p><strong>Credits</strong></p>
 
 <p>A big thanks goes out to the members of @m0tl3ycr3w.</p>
 
-<p><em>Contact</em></p>
+<p><strong>Contact</strong></p>
 
 <p>I’m also very interested in hearing how people go about solving these challenges, so if you’re up for writing a walkthrough, please do so and send me a link, or alternatively, follow me on Twitter, and DM me (you can unfollow after you’ve DM’d me if you’d prefer).</p>
 
@@ -142,7 +142,7 @@ Technical Information</p>
 
 <p>The network configured in Host-only Adapter is 192.168.56.0/24 and the DHCP is enabled.</p>
 
-<p>First step is discover which IP address our target VM got after boot. We will do that using the netdiscover tool.</p>
+<p>First step is to discover which IP address our target VM got after boot. We will do that using the netdiscover tool.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ netdiscover -i eth1 -r 192.168.56.0/24
 
@@ -155,14 +155,14 @@ Technical Information</p>
 <p>We can realize that target VM is 192.168.56.15 since the two other IPs are our hypervisor default addresses.
 Our Kali Linux machine got 192.168.56.9</p>
 
-<p>The next step is try to discover which services are running on our target. We can do this type of scan using nmap.</p>
+<p>The next step is to try to discover which services are running on our target. We can do this type of scan using nmap.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nmap -sC -sV -sT 192.168.56.15
 </code></pre></div></div>
 
 <p><img src="/assets/img/writeupfive86-1/01-nmap-recon.png" alt="NmapRecon" /></p>
 
-<p>At this point we have information about a SSH server in port 22, a webserver in port 80 with robots.txt and a disalowed entry to /ona directory (interesting!) and port 10000 running a Webmin version 1.9.20 service.</p>
+<p>At this point we have information about a SSH server in port 22, a webserver in port 80 with robots.txt and a disallowed entry to /ona directory (interesting!) and port 10000 running a Webmin version 1.9.20 service.</p>
 
 <p>We can try to pull more details running nikto in port 80.</p>
 
@@ -173,17 +173,104 @@ Our Kali Linux machine got 192.168.56.9</p>
 
 <p>As we can see, nothing new about our target after nikto results.</p>
 
-<p>Let’s try to search some more information about our services versions that we got using google and exploit-db.</p>
+<p>Let’s try to search for some more information about our services versions that we got using google and exploit-db.</p>
 
 <p><img src="/assets/img/writeupfive86-1/03-exploit-db.png" alt="Exploit-db" /></p>
 
-<p>The first search points to a Webmin vulnerability in version 1.9.20 that brings to an unauthenticated RCE. The exploit is also a Metasploit module that does the things easy to exploit. The only exception is:</p>
+<p>The first search points to a Webmin vulnerability in version 1.9.20 that brings to an unauthenticated RCE. The exploit is also a Metasploit module that does things easier to exploit. The only exception is:</p>
 
 <p><em>This module exploits a backdoor in Webmin versions 1.890 through 1.920. Only the SourceForge downloads were backdoored, but they are listed as official downloads on the project’s site.</em></p>
 
-<p>So, the exploit author says the module only works on versions downloaded from sourceforge. It should be a problem if our version were downloaded from apt source or other official not backdoored source. Actually, i’ve tested after finding this infomation and exploit didn’t work, confirming probably the version is not backdoored.</p>
+<p><img src="/assets/img/writeupfive86-1/04-webmin-login.png" alt="WebminLogin" /></p>
 
-<p><strong>To be Continued! :)</strong></p>
+<p>So, the exploit author says the module only works on versions downloaded from sourceforge. It should be a problem if our version were downloaded from apt source or another official not backdoored source. Actually, i’ve tested after finding this information and exploit didn’t work, confirming probably the version is not backdoored.</p>
+
+<p>Let’s move on!</p>
+
+<p>As we’ve saw before we have a robots.txt with some restrictions in its configuration. The robots config prevents /ona directory being discovered. Browsing to the /ona path we can see a web application running.</p>
+
+<p><img src="/assets/img/writeupfive86-1/05-ona-page.png" alt="OnaDir" /></p>
+
+<p>The Ona 18.1.1 is running and have known vulnerabilities and also working exploits.</p>
+
+<p><img src="/assets/img/writeupfive86-1/05a-ona-exploitdb.png" alt="OnaExploit" /></p>
+
+<p>Yes! Exploit-db shows a metasploit module for this vulnerabilty. Let’s try to search it in MSF.</p>
+
+<p><img src="/assets/img/writeupfive86-1/05b-ona-exploit.png" alt="OnaExploit" /></p>
+
+<p>At this part, i had a problem to solve that was Metasploit haven’t the Ona exploit module already installed and i had to install manually. That’s why i searched using searchsploit tool before. To install a non existent module in MSF you have to copy the .rb file to its directory (/usr/share/metasploit-framework/modules/exploits/) and update its database (updatedb). After updating you have to restart metasploit to have the exploit appearing in searches.</p>
+
+<p>I’ve chose de directory and file name like that (/usr/share/metasploit-framework/modules/exploits/linux/http/opennetadmin.rb). You can chose yours as you wish but it`s a good practice put it inside its location. You can see that detail just opening the .rb file and reading the description of module.</p>
+
+<p>Now it’s time to exploit the first phase of writeup.</p>
+
+<p><img src="/assets/img/writeupfive86-1/05c-ona-metasploit.png" alt="OnaExploit" /></p>
+
+<p>Session created. Now we have access to the VM Shell through MSF.</p>
+
+<p><img src="/assets/img/writeupfive86-1/06a-www-id.png" alt="www-user" /></p>
+
+<p>As usual, we start the phase of privilege escalation with enumeration. In the very beginning, i’ve tried a lot of enumeration like sudo permission, file permission, mails, hidden directories and other initial scans like linenum and post exploitation modules in metasploit. The only one thing i forgot to try was the first directory that popped when i’ve exploited the ona vulnerability. Because of that, i’ve lost some time trying other methods. It helps to be an advice: Always enumerate every single place that you have access. The answer is the next screenshot:</p>
+
+<p><img src="/assets/img/writeupfive86-1/06-www-directory.png" alt="www-user" /></p>
+
+<p>We can see the username and its hash in the .htpasswd file. The author also sent a tip to not use regular wordlists but create a new one using 10 chars and the letters <strong>aefhrt</strong>. For this part i’ve used the Crunch tool to create our dictionary and after that we start the decryption tool hashcat to crack its password.</p>
+
+<p><img src="/assets/img/writeupfive86-1/07-dictionary.png" alt="crunch" /></p>
+
+<p><img src="/assets/img/writeupfive86-1/08a-hashcat-cracking-hash.png" alt="hashcat" /></p>
+
+<p><img src="/assets/img/writeupfive86-1/08-hashcat-cracking-hash.png" alt="hashcat" /></p>
+
+<p>Having the douglas password now we can try to access his shell using ssh or even su in the www shell.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh douglas@192.168.56.15 (password fatherrrrr)
+or
+$ su douglas
+</code></pre></div></div>
+
+<p><img src="/assets/img/writeupfive86-1/09-ssh-douglas-password.png" alt="douglas" /></p>
+
+<p>Enumerating douglas account we can see an interesting result when i’ve tried  sudo -l. It shows that user jen has access to run the command cp without any password. Thinking malicious, if you have access to copy any file using another account you should for example put some files inside their home directory. So, why not to try copying a generated by me ssh key to his .ssh directory and ssh there ? Let’s try.</p>
+
+<p><img src="/assets/img/writeupfive86-1/10-enumerate-douglas.png" alt="douglas" /></p>
+
+<ul>
+  <li>Generating the ssh key to exploit Jen’s ssh access</li>
+</ul>
+
+<p><img src="/assets/img/writeupfive86-1/11-creating-jen-sshkey.png" alt="douglas" /></p>
+
+<ul>
+  <li>Next steps are: chmod 777 the id_rsa.pub file and copy to .ssh directory inside Jen’s home directory as authorized_keys file. After that just try to ssh using jen’s “new” key.</li>
+</ul>
+
+<p><img src="/assets/img/writeupfive86-1/12-accessing-jen-ssh.png" alt="douglas" /></p>
+
+<p>Since we have access to Jen’s account it’s time, as usual, to enumerate the user.</p>
+
+<p><img src="/assets/img/writeupfive86-1/13-enumerating-jen.png" alt="jens-account" /></p>
+
+<p>Two interesting things about exim4 application and Jen has an unread mail in his box. About exim4, it’s good to mention that exim on this version has some known vulnerability and i’ve tried to exploit it but had no success (rabbit hole). Another known vulnerabilty is shown about its kernel (Linux five86-1 4.19.0-6-amd64 #1 SMP Debian 4.19.67-2+deb10u2 (2019-11-11) x86_64 GNU/Linux) and i also tried to exploit using known exploits but no success too.</p>
+
+<p>So, having failures exploiting exim and kernel, let’s try to see the jen’s mailbox.</p>
+
+<p><img src="/assets/img/writeupfive86-1/14-mail-jen.png" alt="jens-account" /></p>
+
+<p>Gotcha! Jen’s mailbox message has the information of another user (moss). Let’s try to access moss account using its password (Fire!Fire!)</p>
+
+<p><img src="/assets/img/writeupfive86-1/15-ssh-moss.png" alt="moss-account" /></p>
+
+<p>The final step is to enumerate moss account as usual. After looking for files with permission we’ve found a file that could be executed by moss. Looks like a game. Lets execute it.</p>
+
+<p><img src="/assets/img/writeupfive86-1/16-moss-flag.png" alt="moss-account" /></p>
+
+<p>Running the game i’ve answered the questions and it popped the root shell.</p>
+
+<p><strong>That’s all folks!</strong></p>
+
+<p>Thanks for reading</p>
 
 
       </section>
