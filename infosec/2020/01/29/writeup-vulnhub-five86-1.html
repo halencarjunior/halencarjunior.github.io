@@ -1,82 +1,107 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-us">
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=HEAD">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156030085-1"></script>
-        
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-      gtag('config', 'UA-156030085-1');
-    </script>
+  <title>
+    
+      Writeup - Vulnhub machine - Five86-1 &middot; bt0
+    
+  </title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+         google_ad_client: "ca-pub-5149953309426611",
+         enable_page_level_ads: true
+     });
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/blackdoc.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond">
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
 
 
-<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Writeup - Vulnhub machine - Five86-1 | bt0</title>
-<meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Writeup - Vulnhub machine - Five86-1" />
-<meta name="author" content="bt0" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Hi guys, Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project. i’ve chosen that machine because it’s intended to be a beginner’s challenge and it helps a lot to understand how Capture the Flag competitions are made." />
-<meta property="og:description" content="Hi guys, Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project. i’ve chosen that machine because it’s intended to be a beginner’s challenge and it helps a lot to understand how Capture the Flag competitions are made." />
-<link rel="canonical" href="https://www.humbertojunior.com.br/infosec/2020/01/29/writeup-vulnhub-five86-1.html" />
-<meta property="og:url" content="https://www.humbertojunior.com.br/infosec/2020/01/29/writeup-vulnhub-five86-1.html" />
-<meta property="og:site_name" content="bt0" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-01-29T00:00:00-03:00" />
-<script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://www.humbertojunior.com.br/infosec/2020/01/29/writeup-vulnhub-five86-1.html","headline":"Writeup - Vulnhub machine - Five86-1","dateModified":"2020-01-29T00:00:00-03:00","datePublished":"2020-01-29T00:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.humbertojunior.com.br/infosec/2020/01/29/writeup-vulnhub-five86-1.html"},"author":{"@type":"Person","name":"bt0"},"description":"Hi guys, Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project. i’ve chosen that machine because it’s intended to be a beginner’s challenge and it helps a lot to understand how Capture the Flag competitions are made.","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+  <body class="theme-base-06">
 
-  </head>
-
-  <body>
-
-    <header>
-      <div class="container">
-        <a id="a-title" href="/">
-          <!-- <h1>bt0</h1> -->
-          <h1>bt0</h1>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          bt0
         </a>
-        <!--<h2>Blogging about InfoSec</h2> -->
-        <h2>Blogging about InfoSec</h2>
+      </h1>
+      <p class="lead">Just another Infosec Blog - Resources, Tutorial</p>
+    </div>
 
-        <!--<section id="downloads">
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+      
+        
           
-          <a href="https://github.com/halencarjunior/halencarjunior.github.io" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section> -->
-      </div>
-    </header>
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about.html">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/styles.txt">Theme Styles</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
 
-    <div class="container">
-      <section id="main_content">
-        <small>29 January 2020</small>
-<h1>Writeup - Vulnhub machine - Five86-1</h1>
+      <span class="sidebar-nav-item">Currently v2.0.1</span>
+    </nav>
 
-<p class="view">by bt0</p>
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
 
-  <small>tags: <em>infosec</em> - <em>pentest</em> - <em>ctf</em> - <em>vulnhub</em></small>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ad-bt0-bottom -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5149953309426611"
-     data-ad-slot="5627118973"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-<p>Hi guys,</p>
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Writeup - Vulnhub machine - Five86-1</h1>
+  <span class="post-date">29 Jan 2020</span>
+  <p>Hi guys,</p>
 
 <p>Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project.
 i’ve chosen that machine because it’s intended to be a beginner’s challenge and it helps a lot to understand how Capture the Flag competitions are made.
@@ -153,50 +178,50 @@ https://github.com/mubix/post-exploitation/wiki/Linux-Post-Exploitation-Command-
 
 <p>After download and import the VM (i am using Virtualbox), everything configured to run inside the virtualbox private network.</p>
 
-<p><img src="/assets/img/writeupfive86-1/00a-virtualbox-network.png" alt="VirtualboxNetwork" /></p>
+<p><img src="/public/images/writeupfive86-1/00a-virtualbox-network.png" alt="VirtualboxNetwork" /></p>
 
 <p>The network configured in Host-only Adapter is 192.168.56.0/24 and the DHCP is enabled.</p>
 
 <p>First step is to discover which IP address our target VM got after boot. We will do that using the netdiscover tool.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ netdiscover -i eth1 -r 192.168.56.0/24
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ netdiscover -i eth1 -r 192.168.56.0/24
 
 -i = interface (using eth1 because my kali linux has two interfaces and eth1 is the Host-only adapter)
 -r = range
 </code></pre></div></div>
 
-<p><img src="/assets/img/writeupfive86-1/00-netdiscover.png" alt="Netdiscover" /></p>
+<p><img src="/public/images/writeupfive86-1/00-netdiscover.png" alt="Netdiscover" /></p>
 
 <p>We can realize that target VM is 192.168.56.15 since the two other IPs are our hypervisor default addresses.
 Our Kali Linux machine got 192.168.56.9</p>
 
 <p>The next step is to try to discover which services are running on our target. We can do this type of scan using nmap.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nmap -sC -sV -sT 192.168.56.15
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nmap -sC -sV -sT 192.168.56.15
 </code></pre></div></div>
 
-<p><img src="/assets/img/writeupfive86-1/01-nmap-recon.png" alt="NmapRecon" /></p>
+<p><img src="/public/images/writeupfive86-1/01-nmap-recon.png" alt="NmapRecon" /></p>
 
 <p>At this point we have information about a SSH server in port 22, a webserver in port 80 with robots.txt and a disallowed entry to /ona directory (interesting!) and port 10000 running a Webmin version 1.9.20 service.</p>
 
 <p>We can try to pull more details running nikto in port 80.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nikto -host 192.168.56.15
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nikto -host 192.168.56.15
 </code></pre></div></div>
 
-<p><img src="/assets/img/writeupfive86-1/02-nikto-recon.png" alt="Nikto" /></p>
+<p><img src="/public/images/writeupfive86-1/02-nikto-recon.png" alt="Nikto" /></p>
 
 <p>As we can see, nothing new about our target after nikto results.</p>
 
 <p>Let’s try to search for some more information about our services versions that we got using google and exploit-db.</p>
 
-<p><img src="/assets/img/writeupfive86-1/03-exploit-db.png" alt="Exploit-db" /></p>
+<p><img src="/public/images/writeupfive86-1/03-exploit-db.png" alt="Exploit-db" /></p>
 
 <p>The first search points to a Webmin vulnerability in version 1.9.20 that brings to an unauthenticated RCE. The exploit is also a Metasploit module that does things easier to exploit. The only exception is:</p>
 
 <p><em>This module exploits a backdoor in Webmin versions 1.890 through 1.920. Only the SourceForge downloads were backdoored, but they are listed as official downloads on the project’s site.</em></p>
 
-<p><img src="/assets/img/writeupfive86-1/04-webmin-login.png" alt="WebminLogin" /></p>
+<p><img src="/public/images/writeupfive86-1/04-webmin-login.png" alt="WebminLogin" /></p>
 
 <p>So, the exploit author says the module only works on versions downloaded from sourceforge. It should be a problem if our version were downloaded from apt source or another official not backdoored source. Actually, i’ve tested after finding this information and exploit didn’t work, confirming probably the version is not backdoored.</p>
 
@@ -204,15 +229,15 @@ Our Kali Linux machine got 192.168.56.9</p>
 
 <p>As we’ve saw before we have a robots.txt with some restrictions in its configuration. The robots config prevents /ona directory being discovered. Browsing to the /ona path we can see a web application running.</p>
 
-<p><img src="/assets/img/writeupfive86-1/05-ona-page.png" alt="OnaDir" /></p>
+<p><img src="/public/images/writeupfive86-1/05-ona-page.png" alt="OnaDir" /></p>
 
 <p>The Ona 18.1.1 is running and have known vulnerabilities and also working exploits.</p>
 
-<p><img src="/assets/img/writeupfive86-1/05a-ona-exploitdb.png" alt="OnaExploit" /></p>
+<p><img src="/public/images/writeupfive86-1/05a-ona-exploitdb.png" alt="OnaExploit" /></p>
 
 <p>Yes! Exploit-db shows a metasploit module for this vulnerabilty. Let’s try to search it in MSF.</p>
 
-<p><img src="/assets/img/writeupfive86-1/05b-ona-exploit.png" alt="OnaExploit" /></p>
+<p><img src="/public/images/writeupfive86-1/05b-ona-exploit.png" alt="OnaExploit" /></p>
 
 <p>At this part, i had a problem to solve that was Metasploit haven’t the Ona exploit module already installed and i had to install manually. That’s why i searched using searchsploit tool before. To install a non existent module in MSF you have to copy the .rb file to its directory (/usr/share/metasploit-framework/modules/exploits/) and update its database (updatedb). After updating you have to restart metasploit to have the exploit appearing in searches.</p>
 
@@ -222,66 +247,66 @@ Our Kali Linux machine got 192.168.56.9</p>
 
 <p>Now it’s time to exploit the first phase of writeup.</p>
 
-<p><img src="/assets/img/writeupfive86-1/05c-ona-metasploit.png" alt="OnaExploit" /></p>
+<p><img src="/public/images/writeupfive86-1/05c-ona-metasploit.png" alt="OnaExploit" /></p>
 
 <p>Session created. Now we have access to the VM Shell through MSF.</p>
 
-<p><img src="/assets/img/writeupfive86-1/06a-www-id.png" alt="www-user" /></p>
+<p><img src="/public/images/writeupfive86-1/06a-www-id.png" alt="www-user" /></p>
 
 <p>As usual, we start the phase of privilege escalation with enumeration. In the very beginning, i’ve tried a lot of enumeration like sudo permission, file permission, mails, hidden directories and other initial scans like linenum and post exploitation modules in metasploit. The only one thing i forgot to try was the first directory that popped when i’ve exploited the ona vulnerability. Because of that, i’ve lost some time trying other methods. It helps to be an advice: Always enumerate every single place that you have access. The answer is the next screenshot:</p>
 
-<p><img src="/assets/img/writeupfive86-1/06-www-directory.png" alt="www-user" /></p>
+<p><img src="/public/images/writeupfive86-1/06-www-directory.png" alt="www-user" /></p>
 
 <p>We can see the username and its hash in the .htpasswd file. The author also sent a tip to not use regular wordlists but create a new one using 10 chars and the letters <strong>aefhrt</strong>. For this part i’ve used the Crunch tool to create our dictionary and after that we start the decryption tool hashcat to crack its password.</p>
 
-<p><img src="/assets/img/writeupfive86-1/07-dictionary.png" alt="crunch" /></p>
+<p><img src="/public/images/writeupfive86-1/07-dictionary.png" alt="crunch" /></p>
 
-<p><img src="/assets/img/writeupfive86-1/08a-hashcat-cracking-hash.png" alt="hashcat" /></p>
+<p><img src="/public/images/writeupfive86-1/08a-hashcat-cracking-hash.png" alt="hashcat" /></p>
 
-<p><img src="/assets/img/writeupfive86-1/08-hashcat-cracking-hash.png" alt="hashcat" /></p>
+<p><img src="/public/images/writeupfive86-1/08-hashcat-cracking-hash.png" alt="hashcat" /></p>
 
 <p>Having the douglas password now we can try to access his shell using ssh or even su in the www shell.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh douglas@192.168.56.15 (password fatherrrrr)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh douglas@192.168.56.15 (password fatherrrrr)
 or
 $ su douglas
 </code></pre></div></div>
 
-<p><img src="/assets/img/writeupfive86-1/09-ssh-douglas-password.png" alt="douglas" /></p>
+<p><img src="/public/images/writeupfive86-1/09-ssh-douglas-password.png" alt="douglas" /></p>
 
 <p>Enumerating douglas account we can see an interesting result when i’ve tried  sudo -l. It shows that user jen has access to run the command cp without any password. Thinking malicious, if you have access to copy any file using another account you should for example put some files inside their home directory. So, why not to try copying a generated by me ssh key to his .ssh directory and ssh there ? Let’s try.</p>
 
-<p><img src="/assets/img/writeupfive86-1/10-enumerate-douglas.png" alt="douglas" /></p>
+<p><img src="/public/images/writeupfive86-1/10-enumerate-douglas.png" alt="douglas" /></p>
 
 <ul>
   <li>Generating the ssh key to exploit Jen’s ssh access</li>
 </ul>
 
-<p><img src="/assets/img/writeupfive86-1/11-creating-jen-sshkey.png" alt="douglas" /></p>
+<p><img src="/public/images/writeupfive86-1/11-creating-jen-sshkey.png" alt="douglas" /></p>
 
 <ul>
   <li>Next steps are: chmod 777 the id_rsa.pub file and copy to .ssh directory inside Jen’s home directory as authorized_keys file. After that just try to ssh using jen’s “new” key.</li>
 </ul>
 
-<p><img src="/assets/img/writeupfive86-1/12-accessing-jen-ssh.png" alt="douglas" /></p>
+<p><img src="/public/images/writeupfive86-1/12-accessing-jen-ssh.png" alt="douglas" /></p>
 
 <p>Since we have access to Jen’s account it’s time, as usual, to enumerate the user.</p>
 
-<p><img src="/assets/img/writeupfive86-1/13-enumerating-jen.png" alt="jens-account" /></p>
+<p><img src="/public/images/writeupfive86-1/13-enumerating-jen.png" alt="jens-account" /></p>
 
 <p>Two interesting things about exim4 application and Jen has an unread mail in his box. About exim4, it’s good to mention that exim on this version has some known vulnerability and i’ve tried to exploit it but had no success (rabbit hole). Another known vulnerabilty is shown about its kernel (Linux five86-1 4.19.0-6-amd64 #1 SMP Debian 4.19.67-2+deb10u2 (2019-11-11) x86_64 GNU/Linux) and i also tried to exploit using known exploits but no success too.</p>
 
 <p>So, having failures exploiting exim and kernel, let’s try to see the jen’s mailbox.</p>
 
-<p><img src="/assets/img/writeupfive86-1/14-mail-jen.png" alt="jens-account" /></p>
+<p><img src="/public/images/writeupfive86-1/14-mail-jen.png" alt="jens-account" /></p>
 
 <p>Gotcha! Jen’s mailbox message has the information of another user (moss). Let’s try to access moss account using its password (Fire!Fire!)</p>
 
-<p><img src="/assets/img/writeupfive86-1/15-ssh-moss.png" alt="moss-account" /></p>
+<p><img src="/public/images/writeupfive86-1/15-ssh-moss.png" alt="moss-account" /></p>
 
 <p>The final step is to enumerate moss account as usual. After looking for files with permission we’ve found a file that could be executed by moss. Looks like a game. Lets execute it.</p>
 
-<p><img src="/assets/img/writeupfive86-1/16-moss-flag.png" alt="moss-account" /></p>
+<p><img src="/public/images/writeupfive86-1/16-moss-flag.png" alt="moss-account" /></p>
 
 <p>Running the game i’ve answered the questions and it popped the root shell.</p>
 
@@ -289,10 +314,43 @@ $ su douglas
 
 <p>Thanks for reading</p>
 
-        <script data-ad-client="ca-pub-5149953309426611" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      </section>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/infosec/2020/02/11/osint-repository.html">
+            OSINT - Some Repositories and Tools
+            <small>11 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/infosec/2020/01/17/ssh-bruteforce-some-tools.html">
+            How to brute force SSH - Some Tools
+            <small>17 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/infosec/2020/01/09/pentest-cheat-sheet.html">
+            Pentest Cheat Sheet
+            <small>09 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
     </div>
-    
-    
+
   </body>
 </html>

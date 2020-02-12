@@ -1,82 +1,107 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-us">
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=HEAD">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156030085-1"></script>
-        
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-      gtag('config', 'UA-156030085-1');
-    </script>
+  <title>
+    
+      How to brute force SSH - Some Tools &middot; bt0
+    
+  </title>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+         google_ad_client: "ca-pub-5149953309426611",
+         enable_page_level_ads: true
+     });
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/blackdoc.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond">
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
 
 
-<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>How to brute force SSH - Some Tools | bt0</title>
-<meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="How to brute force SSH - Some Tools" />
-<meta name="author" content="bt0" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers. Disclaimer: First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own." />
-<meta property="og:description" content="Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers. Disclaimer: First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own." />
-<link rel="canonical" href="https://www.humbertojunior.com.br/infosec/2020/01/17/ssh-bruteforce-some-tools.html" />
-<meta property="og:url" content="https://www.humbertojunior.com.br/infosec/2020/01/17/ssh-bruteforce-some-tools.html" />
-<meta property="og:site_name" content="bt0" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-01-17T00:00:00-03:00" />
-<script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://www.humbertojunior.com.br/infosec/2020/01/17/ssh-bruteforce-some-tools.html","headline":"How to brute force SSH - Some Tools","dateModified":"2020-01-17T00:00:00-03:00","datePublished":"2020-01-17T00:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.humbertojunior.com.br/infosec/2020/01/17/ssh-bruteforce-some-tools.html"},"author":{"@type":"Person","name":"bt0"},"description":"Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers. Disclaimer: First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own.","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+  <body class="theme-base-06">
 
-  </head>
-
-  <body>
-
-    <header>
-      <div class="container">
-        <a id="a-title" href="/">
-          <!-- <h1>bt0</h1> -->
-          <h1>bt0</h1>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          bt0
         </a>
-        <!--<h2>Blogging about InfoSec</h2> -->
-        <h2>Blogging about InfoSec</h2>
+      </h1>
+      <p class="lead">Just another Infosec Blog - Resources, Tutorial</p>
+    </div>
 
-        <!--<section id="downloads">
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+      
+        
           
-          <a href="https://github.com/halencarjunior/halencarjunior.github.io" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section> -->
-      </div>
-    </header>
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about.html">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/styles.txt">Theme Styles</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
 
-    <div class="container">
-      <section id="main_content">
-        <small>17 January 2020</small>
-<h1>How to brute force SSH - Some Tools</h1>
+      <span class="sidebar-nav-item">Currently v2.0.1</span>
+    </nav>
 
-<p class="view">by bt0</p>
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
 
-  <small>tags: <em>infosec</em> - <em>pentest</em></small>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ad-bt0-bottom -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5149953309426611"
-     data-ad-slot="5627118973"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-<p>Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers.</p>
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">How to brute force SSH - Some Tools</h1>
+  <span class="post-date">17 Jan 2020</span>
+  <p>Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers.</p>
 
 <p>Disclaimer:
 First of all, it’s good to say that you should not run this kind of tool on servers that you don’t have permission to scan. The risks of doing something like that is at your own.<!--more--></p>
@@ -96,7 +121,7 @@ First of all, it’s good to say that you should not run this kind of tool on se
 
 <p>Testing our target using user and password above:</p>
 
-<p><img src="/assets/img/ssh.png" alt="SSH" /></p>
+<p><img src="/public/images/ssh.png" alt="SSH" /></p>
 
 <h2 id="metasploit">Metasploit</h2>
 
@@ -107,24 +132,24 @@ First of all, it’s good to say that you should not run this kind of tool on se
 
 <p>Let’s run Metasploit to start the brute force in our virtual machine IP address (192.168.56.13).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ msfdb run
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ msfdb run
 
 </code></pre></div></div>
 <p>Now let’s search for an auxiliary module that should be used to root password guess on this ip address.</p>
 
-<p><img src="/assets/img/metasploit01.png" alt="Metasploit" /></p>
+<p><img src="/public/images/metasploit01.png" alt="Metasploit" /></p>
 
 <p>As we can see in the image above, there is a module <em>auxiliary/scanner/ssh/ssh_login</em> that we could use to check for username and password. Let’s chose this one and show its options (command show options).</p>
 
-<p><img src="/assets/img/metasploit02.png" alt="Metasploit" /></p>
+<p><img src="/public/images/metasploit02.png" alt="Metasploit" /></p>
 
 <p>Now we have to change some options to configure the module.</p>
 
-<p><img src="/assets/img/metasploit03.png" alt="Metasploit" /></p>
+<p><img src="/public/images/metasploit03.png" alt="Metasploit" /></p>
 
 <p>We’ve used the rockyou wordlist to configure our brute force. Feel free to use your wordlist or create a new one. Since we know the username (admin), we just set the password option to use a wordlist. We’ve also changed the threads number to 10 so the process will be faster (locally of course). We’ve set STOP_ON_SUCCESS so it stops when the password is found. Now, time to RUN!</p>
 
-<p><img src="/assets/img/metasploit04.png" alt="Metasploit" /></p>
+<p><img src="/public/images/metasploit04.png" alt="Metasploit" /></p>
 
 <p>Gotcha! Session 1 was opened after msf discover the password.</p>
 
@@ -135,13 +160,13 @@ First of all, it’s good to say that you should not run this kind of tool on se
 <p>Accordingly author, the hydra could work well on Linux, Windows/Cygwin, Solaris, FreeBSD/OpenBSD, QNX (Blackberry 10) and MacOS.
 If you are using Kali Linux the tool is already installed.</p>
 
-<p><img src="/assets/img/hydra01.png" alt="THC Hydra" /></p>
+<p><img src="/public/images/hydra01.png" alt="THC Hydra" /></p>
 
 <p>Well, the hydra command for brute force testing on SSH service looks like this:</p>
 
 <p>hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.56.13 ssh</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-l : Name of user to be tested
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-l : Name of user to be tested
 
 -P : wordlist to be used for test
 
@@ -152,7 +177,7 @@ ssh : service to be tested
 
 <p>Let’s test using hydra command</p>
 
-<p><img src="/assets/img/hydra02.png" alt="THC Hydra" /></p>
+<p><img src="/public/images/hydra02.png" alt="THC Hydra" /></p>
 
 <p>Well, it works!</p>
 
@@ -162,14 +187,14 @@ ssh : service to be tested
 
 <p>We can use nmap scripts to do some more advanced scans in servers for vulnerabilities and even brute force. For this one we will use the ssh-brute nse script to achieve our objective.</p>
 
-<p><img src="/assets/img/nmap01.png" alt="Nmap" /></p>
+<p><img src="/public/images/nmap01.png" alt="Nmap" /></p>
 
 <p>For this test i’ve created two files (users.txt and pass.txt), filled with admin user and the other with a little part of rockyou.txt wordlist to be faster since we do not have the STOP on SUCCESS option and verbose are always visible, making some noise display of results.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap 192.168.56.13 -p 22 --script ssh-brute --script-args userdb=users.txt,passdb=pass.txt
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap 192.168.56.13 -p 22 --script ssh-brute --script-args userdb=users.txt,passdb=pass.txt
 </code></pre></div></div>
 
-<p><img src="/assets/img/nmap02.png" alt="Nmap" /></p>
+<p><img src="/public/images/nmap02.png" alt="Nmap" /></p>
 
 <p>You can have more details at <a href="https://nmap.org/nsedoc/scripts/ssh-brute.html">nmap’s script URL</a></p>
 
@@ -179,7 +204,7 @@ ssh : service to be tested
 
 <p>You can have more information at <a href="http://foofus.net/goons/jmk/medusa/medusa.html">Medusa Website</a></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>medusa -h 192.168.56.13 -u admin -P /usr/share/wordlists/rockyou.txt -e s -M ssh
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>medusa -h 192.168.56.13 -u admin -P /usr/share/wordlists/rockyou.txt -e s -M ssh
 
 -h Target hostname or IP
 -u username
@@ -188,7 +213,7 @@ ssh : service to be tested
 -M name of the module to execute
 </code></pre></div></div>
 
-<p><img src="/assets/img/medusa01.png" alt="Medusa" /></p>
+<p><img src="/public/images/medusa01.png" alt="Medusa" /></p>
 
 <h2 id="ncrack">Ncrack</h2>
 
@@ -196,21 +221,54 @@ ssh : service to be tested
 
 <p><a href="https://nmap.org/ncrack/">Ncrack’s Website</a></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ncrack --user admin -P /root/pass.txt ssh://192.168.56.13
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ncrack --user admin -P /root/pass.txt ssh://192.168.56.13
 
 --user -&gt; username to test
 -P -&gt; wordlist
 </code></pre></div></div>
 
-<p><img src="/assets/img/ncrack01.png" alt="Ncrack" /></p>
+<p><img src="/public/images/ncrack01.png" alt="Ncrack" /></p>
 
 <p>That’s all for now folks!
 Thanks for reading.</p>
 
-        <script data-ad-client="ca-pub-5149953309426611" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      </section>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/infosec/2020/02/11/osint-repository.html">
+            OSINT - Some Repositories and Tools
+            <small>11 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/infosec/2020/01/29/writeup-vulnhub-five86-1.html">
+            Writeup - Vulnhub machine - Five86-1
+            <small>29 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/infosec/2020/01/09/pentest-cheat-sheet.html">
+            Pentest Cheat Sheet
+            <small>09 Jan 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
     </div>
-    
-    
+
   </body>
 </html>
