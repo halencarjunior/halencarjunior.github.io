@@ -146,12 +146,16 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo gvm-setup
 
  sudo gvm-feed-update
- sudo runuser -u _gvm — greenbone-nvt-sync
- sudo runuser -u _gvm — greenbone-scapdata-sync
- sudo runuser -u _gvm — greenbone-nvt-sync
+ sudo runuser -u _gvm -- greenbone-nvt-sync
+ sudo runuser -u _gvm -- greenbone-scapdata-sync
+ sudo runuser -u _gvm -- greenbone-nvt-sync
  sudo systemctl enable /lib/systemd/system/greenbone-security-assistant.service
  sudo gvm-start
 </code></pre></div></div>
+
+<p>Now you are able to access the admin page using: https://127.0.0.1:9332</p>
+
+<p>To change the listening IP you have to change the file /lib/systemd/system/greenbone-security-assistant.service</p>
 
 <p>List of resources:</p>
 
