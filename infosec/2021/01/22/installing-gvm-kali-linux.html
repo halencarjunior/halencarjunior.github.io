@@ -11,7 +11,7 @@
 
   <title>
     
-      OSINT - Some Repositories and Tools &middot; bt0
+      Installing GVM on Kali Linux 2020 &middot; bt0
     
   </title>
 
@@ -110,31 +110,12 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">OSINT - Some Repositories and Tools</h1>
-  <span class="post-date">11 Feb 2020</span>
-  <h2 id="osint">OSINT</h2>
+  <h1 class="post-title">Installing GVM on Kali Linux 2020</h1>
+  <span class="post-date">22 Jan 2021</span>
+  <h2 id="greenbone-vulnerability-manager-old-openvas">Greenbone Vulnerability Manager (Old OpenVAS)</h2>
 
-<p><strong>Open-source intelligence</strong> (OSINT) is data collected from publicly available sources to be used in an intelligence context.In the intelligence community, the term “open” refers to overt, publicly available sources (as opposed to covert or clandestine sources). It is not related to open-source software or collective intelligence.
+<p>Here is a list of commands to install GVM on Kali Linux 2020. I have compiled the commands after tried to install using source code. So, Kali Linux has the bin package to install it using apt.
 <!--more--></p>
-
-<p>OSINT under one name or another has been around for hundreds of years. With the advent of instant communications and rapid information transfer, a great deal of actionable and predictive intelligence can now be obtained from public, unclassified sources.</p>
-
-<p><a href="https://en.wikipedia.org/wiki/Open-source_intelligence">Wikipedia Link</a></p>
-
-<p>List of resources:</p>
-
-<ul>
-  <li><a href="http://ewasion.github.io/opendirectory-finder/">Open Direcroty Finder</a></li>
-  <li><a href="http://eyeofjustice.com/od/">Eye of Justice</a></li>
-  <li><a href="http://rsch.neocities.org/gen2/filer.html">Filer</a></li>
-  <li><a href="http://lumpysoft.com">Lumpy Soft</a></li>
-  <li><a href="http://open-directories.reecemercer.dev">Open Directories</a></li>
-  <li><a href="http://snowfl.com">SnowFL</a></li>
-  <li><a href="http://opendirectorysearch.tk">Open Directory Search</a></li>
-  <li><a href="http://lendx.org">Lendx</a></li>
-  <li><a href="http://sites.google.com/view/l33tech/tools/ods">l33tech ODS</a></li>
-  <li><a href="http://palined.com/search/">Palined Search</a></li>
-</ul>
 
 <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
@@ -143,57 +124,42 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></p>
 
-<ul>
-  <li><a href="https://censys.io">Censys</a></li>
-  <li><a href="https://shodan.io">Shodan</a></li>
-  <li><a href="https://viz.greynoise.io/table">Viz</a></li>
-  <li><a href="https://zoomeye.org">ZoomEye</a></li>
-  <li><a href="https://fofa.so">Fofa</a></li>
-  <li><a href="https://onyphe.io">Onyphe</a></li>
-  <li><a href="https://app.binaryedge.io">BinaryEdge</a></li>
-  <li><a href="https://hunter.io">Hunter IO</a></li>
-  <li><a href="https://wigle.net">Wigle</a></li>
-  <li><a href="https://Lampire.io">Lampire</a></li>
-</ul>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo apt update &amp;&amp; apt upgrade
+ sudo apt-get install gvm
+ sudo runuser -u _gvm -- gvm-manage-certs -a -f
+ sudo runuser -u _gvm -- gvmd –create-user=&lt;UserName&gt; –password=&lt;Password&gt;
 
-<h3 id="people-search">People Search</h3>
+ sudo systemctl enable redis-server@openvas.service
+ sudo systemctl start redis-server@openvas.service
 
-<ul>
-  <li><a href="https://thatsthem.com">Thats Them</a></li>
-  <li><a href="http://www.lullar.com">Lullar</a></li>
-  <li><a href="http://www.yasni.com">Yasni</a></li>
-  <li><a href="https://www.zabasearch.com">ZabaSearch</a></li>
-  <li><a href="https://webmii.com">Webmii</a></li>
-  <li><a href="http://www.ipeople.com">iPeople</a></li>
-  <li><a href="http://truepeoplesearch.com">True People Search</a></li>
-  <li><a href="https://findpeoplesearch.com">Find People Search</a></li>
-  <li><a href="https://anywho.com">Anywho</a></li>
-  <li><a href="https://johndoe.com">JohDoe</a></li>
-  <li><a href="https://cvgadget.com">CV Gadget</a></li>
-  <li><a href="https://w3.telephonedirectories.us/People-Search">Telephone Dir</a></li>
-  <li><a href="https://www.mylife.com/people-search/">MyLife PPL Search</a></li>
-</ul>
+ sudo runuser -u _gvm -- greenbone-nvt-sync
+ sudo runuser -u _gvm -- greenbone-feed-sync --type SCAP
+ sudo runuser -u _gvm -- greenbone-feed-sync --type CERT
+ sudo runuser -u postgres -- /usr/share/gvm/create-postgresql-database
+</code></pre></div></div>
 
-<h2 id="username-search-tools">Username Search Tools</h2>
+<h3 id="verifying-the-setup">Verifying the setup</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo gvm-check-setup 
+</code></pre></div></div>
+
+<h3 id="starting-the-setup">Starting the setup</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo gvm-setup
+
+ sudo gvm-feed-update
+ sudo runuser -u _gvm — greenbone-nvt-sync
+ sudo runuser -u _gvm — greenbone-scapdata-sync
+ sudo runuser -u _gvm — greenbone-nvt-sync
+ sudo systemctl enable /lib/systemd/system/greenbone-security-assistant.service
+ sudo gvm-start
+</code></pre></div></div>
+
+<p>List of resources:</p>
 
 <ul>
-  <li><a href="https://peekyou.com">PeekYou</a></li>
-  <li><a href="https://searchpof.com">SearchPof</a></li>
-  <li><a href="https://knowem.com">Knowem</a></li>
-  <li><a href="https://namechk.com">Namechk</a></li>
-  <li><a href="https://www.snapdex.com">Snapdex</a></li>
-  <li><a href="https://getpeoplesearch.com/username">GetPeopleSearch</a></li>
-  <li><a href="https://uk.match.com">Match UK</a></li>
-  <li><a href="https://lullar-com-3.appspot.com">Lullar</a></li>
-  <li><a href="https://checkusernames.com">Check Usernames</a></li>
-  <li><a href="https://www.namecheckr.com">Namecheckr</a></li>
-  <li><a href="http://usersherlock.com">User Sherlock</a></li>
-  <li><a href="http://instantusername.com">Instant Username</a></li>
-  <li><a href="https://usersearch.org">Usersearch</a></li>
+  <li><a href="https://github.com/greenbone/openvas/releases/">Greenbone OpenVAS</a></li>
 </ul>
 
-<p>Thanks for following!
-<em>To be updated</em></p>
+<p>Thanks for following!</p>
 
 </div>
 
@@ -203,9 +169,9 @@
     
       <li>
         <h3>
-          <a href="/infosec/2021/01/22/installing-gvm-kali-linux.html">
-            Installing GVM on Kali Linux 2020
-            <small>22 Jan 2021</small>
+          <a href="/infosec/2020/02/11/osint-repository.html">
+            OSINT - Some Repositories and Tools
+            <small>11 Feb 2020</small>
           </a>
         </h3>
       </li>

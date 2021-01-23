@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>bt0</title>
- <link href="https://www.humbertojunior.com.br/atom.xml" rel="self"/>
- <link href="https://www.humbertojunior.com.br/"/>
- <updated>2020-02-12T16:51:22-03:00</updated>
- <id>https://www.humbertojunior.com.br</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2021-01-22T22:00:56-03:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>bt0</name>
    <email></email>
@@ -13,10 +13,66 @@
 
  
  <entry>
+   <title>Installing GVM on Kali Linux 2020</title>
+   <link href="http://localhost:4000/infosec/2021/01/22/installing-gvm-kali-linux.html"/>
+   <updated>2021-01-22T00:00:00-03:00</updated>
+   <id>http://localhost:4000/infosec/2021/01/22/installing-gvm-kali-linux</id>
+   <content type="html">&lt;h2 id=&quot;greenbone-vulnerability-manager-old-openvas&quot;&gt;Greenbone Vulnerability Manager (Old OpenVAS)&lt;/h2&gt;
+
+&lt;p&gt;Here is a list of commands to install GVM on Kali Linux 2020. I have compiled the commands after tried to install using source code. So, Kali Linux has the bin package to install it using apt.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;script async=&quot;&quot; src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-5149953309426611&quot; data-ad-slot=&quot;3196203233&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+     (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo apt update &amp;amp;&amp;amp; apt upgrade
+ sudo apt-get install gvm
+ sudo runuser -u _gvm -- gvm-manage-certs -a -f
+ sudo runuser -u _gvm -- gvmd –create-user=&amp;lt;UserName&amp;gt; –password=&amp;lt;Password&amp;gt;
+
+ sudo systemctl enable redis-server@openvas.service
+ sudo systemctl start redis-server@openvas.service
+
+ sudo runuser -u _gvm -- greenbone-nvt-sync
+ sudo runuser -u _gvm -- greenbone-feed-sync --type SCAP
+ sudo runuser -u _gvm -- greenbone-feed-sync --type CERT
+ sudo runuser -u postgres -- /usr/share/gvm/create-postgresql-database
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;verifying-the-setup&quot;&gt;Verifying the setup&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo gvm-check-setup 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;starting-the-setup&quot;&gt;Starting the setup&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo gvm-setup
+
+ sudo gvm-feed-update
+ sudo runuser -u _gvm — greenbone-nvt-sync
+ sudo runuser -u _gvm — greenbone-scapdata-sync
+ sudo runuser -u _gvm — greenbone-nvt-sync
+ sudo systemctl enable /lib/systemd/system/greenbone-security-assistant.service
+ sudo gvm-start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;List of resources:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/greenbone/openvas/releases/&quot;&gt;Greenbone OpenVAS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks for following!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>OSINT - Some Repositories and Tools</title>
-   <link href="https://www.humbertojunior.com.br/infosec/2020/02/11/osint-repository.html"/>
+   <link href="http://localhost:4000/infosec/2020/02/11/osint-repository.html"/>
    <updated>2020-02-11T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/infosec/2020/02/11/osint-repository</id>
+   <id>http://localhost:4000/infosec/2020/02/11/osint-repository</id>
    <content type="html">&lt;h2 id=&quot;osint&quot;&gt;OSINT&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Open-source intelligence&lt;/strong&gt; (OSINT) is data collected from publicly available sources to be used in an intelligence context.In the intelligence community, the term “open” refers to overt, publicly available sources (as opposed to covert or clandestine sources). It is not related to open-source software or collective intelligence.
@@ -104,9 +160,9 @@
  
  <entry>
    <title>Writeup - Vulnhub machine - Five86-1</title>
-   <link href="https://www.humbertojunior.com.br/infosec/2020/01/29/writeup-vulnhub-five86-1.html"/>
+   <link href="http://localhost:4000/infosec/2020/01/29/writeup-vulnhub-five86-1.html"/>
    <updated>2020-01-29T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/infosec/2020/01/29/writeup-vulnhub-five86-1</id>
+   <id>http://localhost:4000/infosec/2020/01/29/writeup-vulnhub-five86-1</id>
    <content type="html">&lt;p&gt;Hi guys,&lt;/p&gt;
 
 &lt;p&gt;Today i am posting my first try to write a walkthrough of a OSCP like machine that i’ve download in vulnhub project.
@@ -324,9 +380,9 @@ $ su douglas
  
  <entry>
    <title>How to brute force SSH - Some Tools</title>
-   <link href="https://www.humbertojunior.com.br/infosec/2020/01/17/ssh-bruteforce-some-tools.html"/>
+   <link href="http://localhost:4000/infosec/2020/01/17/ssh-bruteforce-some-tools.html"/>
    <updated>2020-01-17T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/infosec/2020/01/17/ssh-bruteforce-some-tools</id>
+   <id>http://localhost:4000/infosec/2020/01/17/ssh-bruteforce-some-tools</id>
    <content type="html">&lt;p&gt;Hello guys, in this topic I’ll show you some tools and its commands to start a brute force in SSH servers.&lt;/p&gt;
 
 &lt;p&gt;Disclaimer:
@@ -342,7 +398,8 @@ First of all, it’s good to say that you should not run this kind of tool on se
 
 &lt;p&gt;I’ve created an Virtualbox VM using Ubuntu 18.04 and installed the OpenSSH. After that, an user &lt;em&gt;admin&lt;/em&gt; was added with a known password. We will also use a known wordlist to conduct our brute force.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# useradd admin&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# useradd admin
+&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# passwd admin (using the password &quot;fuckyou&quot;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Testing our target using user and password above:&lt;/p&gt;
@@ -462,9 +519,9 @@ Thanks for reading.&lt;/p&gt;
  
  <entry>
    <title>Pentest Cheat Sheet</title>
-   <link href="https://www.humbertojunior.com.br/infosec/2020/01/09/pentest-cheat-sheet.html"/>
+   <link href="http://localhost:4000/infosec/2020/01/09/pentest-cheat-sheet.html"/>
    <updated>2020-01-09T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/infosec/2020/01/09/pentest-cheat-sheet</id>
+   <id>http://localhost:4000/infosec/2020/01/09/pentest-cheat-sheet</id>
    <content type="html">&lt;p&gt;Uma reunião de alguns comandos que uso com frequência (para referência e CTRL+C / CTRL+V).
 &lt;!--more--&gt;&lt;/p&gt;
 
@@ -533,9 +590,9 @@ On Target:      &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; /tmp/f&lt;span 
  
  <entry>
    <title>Como proteger o seu Whatsapp?</title>
-   <link href="https://www.humbertojunior.com.br/infosec/2019/08/12/como-proteger-o-whatsapp.html"/>
+   <link href="http://localhost:4000/infosec/2019/08/12/como-proteger-o-whatsapp.html"/>
    <updated>2019-08-12T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/infosec/2019/08/12/como-proteger-o-whatsapp</id>
+   <id>http://localhost:4000/infosec/2019/08/12/como-proteger-o-whatsapp</id>
    <content type="html">&lt;p&gt;Golpes e o perigo da desinformação sobre Privacidade e Segurança da Informação&lt;/p&gt;
 
 &lt;p&gt;É inegável a ascenção da Internet nos últimos 10 anos. Quem poderia imaginar que tantas pessoas hoje em dia pudessem se comunicar com parentes distantes, com amigos, sem utilizar uma ligação telefônica para tal situação?&lt;!--more--&gt;&lt;/p&gt;
@@ -646,9 +703,9 @@ Recursos adicionais&lt;/p&gt;
  
  <entry>
    <title>Deep Web: o que se esconde no submundo da internet</title>
-   <link href="https://www.humbertojunior.com.br/dweb/2019/07/22/deep-web-o-que-esconde.html"/>
+   <link href="http://localhost:4000/dweb/2019/07/22/deep-web-o-que-esconde.html"/>
    <updated>2019-07-22T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/dweb/2019/07/22/deep-web-o-que-esconde</id>
+   <id>http://localhost:4000/dweb/2019/07/22/deep-web-o-que-esconde</id>
    <content type="html">&lt;p&gt;A internet profunda, ou “Deep Web“, esse enorme espaço virtual que foge ao controle da Justiça convencional e que seria 400 vezes maior do que a internet comum, esconde um mundo de atividades criminosas que buscam anonimato, enquanto aumentam as práticas ilícitas.&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;p&gt;Recentemente divulgado, um relatório da Trend Micro intitulado “Abaixo da superfície: exploração da Deep Web” revelou que mais de 25% das buscas entre a Deep Web e a internet padrão são com fins de exploração infantil e pornografia.&lt;/p&gt;
@@ -679,9 +736,9 @@ Recursos adicionais&lt;/p&gt;
  
  <entry>
    <title>Fatos Interessantes Sobre a Criptografia</title>
-   <link href="https://www.humbertojunior.com.br/criptografia/2019/07/05/fatos-interessantes-sobre-a-criptografia.html"/>
+   <link href="http://localhost:4000/criptografia/2019/07/05/fatos-interessantes-sobre-a-criptografia.html"/>
    <updated>2019-07-05T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/criptografia/2019/07/05/fatos-interessantes-sobre-a-criptografia</id>
+   <id>http://localhost:4000/criptografia/2019/07/05/fatos-interessantes-sobre-a-criptografia</id>
    <content type="html">&lt;p&gt;A Criptografia, assim como a Criptoanálise e as diversas vertentes dessa área fascinante da Segurança da Informação tem uma história bem interessante e é cheia de teorias deslumbrantes e até mesmo engraçadas no ponto de vista mais atual. Vale a pena o estudo e pesquisa para conhecermos um pouco mais sobre a arte de esconder mensagens.&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -725,9 +782,9 @@ Livro: Códigos &amp;amp; Cifras da Antiguidade à era Moderna&lt;/p&gt;
  
  <entry>
    <title>Packet Tracer CISCO – Software para criação de Laboratórios de Redes CISCO</title>
-   <link href="https://www.humbertojunior.com.br/redes/2019/06/13/packet-tracer-cisco.html"/>
+   <link href="http://localhost:4000/redes/2019/06/13/packet-tracer-cisco.html"/>
    <updated>2019-06-13T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/redes/2019/06/13/packet-tracer-cisco</id>
+   <id>http://localhost:4000/redes/2019/06/13/packet-tracer-cisco</id>
    <content type="html">&lt;p&gt;O &lt;strong&gt;Packet Tracer&lt;/strong&gt; é um software desenvolvido pela CISCO que simula um ambiente de Laboratório onde o estudante pode criar redes virtuais com diversos componentes de Redes como Roteadores, Switches, Computadores, etc…Abaixo segue um vídeo mostrando como fazer o download, instalação e tradução para o Português, porém, estou disponibilizando links para download do software diretamente aqui no blog.
 &lt;!--more--&gt;&lt;/p&gt;
 
@@ -752,9 +809,9 @@ Livro: Códigos &amp;amp; Cifras da Antiguidade à era Moderna&lt;/p&gt;
  
  <entry>
    <title>Distribuições Linux para Auditoria – Segurança da Informação (Atualizado)</title>
-   <link href="https://www.humbertojunior.com.br/infosec/2019/06/12/distribuicoes-para-praticar-infosec.html"/>
+   <link href="http://localhost:4000/infosec/2019/06/12/distribuicoes-para-praticar-infosec.html"/>
    <updated>2019-06-12T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/infosec/2019/06/12/distribuicoes-para-praticar-infosec</id>
+   <id>http://localhost:4000/infosec/2019/06/12/distribuicoes-para-praticar-infosec</id>
    <content type="html">&lt;p&gt;Nesse post vou listar algumas distribuições que são usadas por muitos profissionais de Segurança da Informação para desenvolver suas pesquisas, seus artigos, tutoriais relacionados à exploração de falhas em diversos ambientes. Em outras oportunidades falarei de algumas outras ferramentas mais específicas para análise de vulnerabilidades.
 &lt;!--more--&gt;&lt;/p&gt;
 
@@ -793,9 +850,9 @@ Livro: Códigos &amp;amp; Cifras da Antiguidade à era Moderna&lt;/p&gt;
  
  <entry>
    <title>15 Sites e ferramentas Vulneráveis para praticar legalmente</title>
-   <link href="https://www.humbertojunior.com.br/infosec/2019/02/01/15-sites-para-praticar.html"/>
+   <link href="http://localhost:4000/infosec/2019/02/01/15-sites-para-praticar.html"/>
    <updated>2019-02-01T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/infosec/2019/02/01/15-sites-para-praticar</id>
+   <id>http://localhost:4000/infosec/2019/02/01/15-sites-para-praticar</id>
    <content type="html">&lt;p&gt;Se você é estudante de Segurança da Informação, pesquisador, curioso, tem como hobby a pesquisa em cima de vulnerabilidades em aplicações Web, segue abaixo uma lista de sites com vulnerabilidades onde o estudante pode praticar legalmente suas skills.&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -850,9 +907,9 @@ Livro: Códigos &amp;amp; Cifras da Antiguidade à era Moderna&lt;/p&gt;
  
  <entry>
    <title>40+ Opções para praticar suas skills</title>
-   <link href="https://www.humbertojunior.com.br/infosec/2019/01/14/opcoes-para-praticar.html"/>
+   <link href="http://localhost:4000/infosec/2019/01/14/opcoes-para-praticar.html"/>
    <updated>2019-01-14T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/infosec/2019/01/14/opcoes-para-praticar</id>
+   <id>http://localhost:4000/infosec/2019/01/14/opcoes-para-praticar</id>
    <content type="html">&lt;p&gt;Para pesquisadores, estudantes e entusiastas de segurança da informação e que precisam de alguma forma aplicar seus conhecimentos, segue abaixo uma lista de Sites para praticar suas skills de Segurança.&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;p&gt;bWAPP http://www.itsecgames.com/&lt;/p&gt;
@@ -939,9 +996,9 @@ Livro: Códigos &amp;amp; Cifras da Antiguidade à era Moderna&lt;/p&gt;
  
  <entry>
    <title>12 Dicas para prevenção de extorsão online</title>
-   <link href="https://www.humbertojunior.com.br/infosec/2018/10/20/12-dicas-de-prevencao-de-extorsao-online.html"/>
+   <link href="http://localhost:4000/infosec/2018/10/20/12-dicas-de-prevencao-de-extorsao-online.html"/>
    <updated>2018-10-20T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/infosec/2018/10/20/12-dicas-de-prevencao-de-extorsao-online</id>
+   <id>http://localhost:4000/infosec/2018/10/20/12-dicas-de-prevencao-de-extorsao-online</id>
    <content type="html">&lt;p&gt;Nada melhor do que ter precaução em tempos de cyber-ataques. Para aqueles que insistem em utilizar um sistema operacional pago, ainda mais sendo pirata, a recomendação é: INSTALEM UM S.O. Livre e Livrem-se da maioria desses ataques frequentes.
 &lt;!--more--&gt;
 Logo abaixo seguem algumas dicas de como se prevenir da extorsão online.&lt;/p&gt;
@@ -965,9 +1022,9 @@ Logo abaixo seguem algumas dicas de como se prevenir da extorsão online.&lt;/p&
  
  <entry>
    <title>Documentário: Dentro da Dark Web</title>
-   <link href="https://www.humbertojunior.com.br/dweb/2018/05/10/documentario-dentro-da-deep-web.html"/>
+   <link href="http://localhost:4000/dweb/2018/05/10/documentario-dentro-da-deep-web.html"/>
    <updated>2018-05-10T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/dweb/2018/05/10/documentario-dentro-da-deep-web</id>
+   <id>http://localhost:4000/dweb/2018/05/10/documentario-dentro-da-deep-web</id>
    <content type="html">&lt;p&gt;Vinte anos após a internet ter sido criada, ela agora enfrenta a maior controvérsia de sua existência: vigilância.&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;p&gt;Com muitos preocupados que os governos e as corporações possam monitorar cada movimento nosso, a de opinião de hackers e cientistas que desenvolveram tecnologias usadas para contra-atacar, uma delas é a rede ”Tor”, uma tecnologia controversa que pode tornar um usuário anônimo, mas ajudar a ocultar criminosos na ”Dark Web”, um lugar onde quase tudo pode ser comprado: armas, drogas, detalhes de cartões de crédito roubados e até mesmo pessoas. As tecnologias de vigilância estão por aí para nos proteger ou existem outras formas de nos mantermos seguros online sem termos que nos refugiarmos em locais como a Dark Web?&lt;/p&gt;
@@ -980,9 +1037,9 @@ Logo abaixo seguem algumas dicas de como se prevenir da extorsão online.&lt;/p&
  
  <entry>
    <title>WANNACRY, O que já se sabe sobre o ataque que alertou o mundo?</title>
-   <link href="https://www.humbertojunior.com.br/ransonware/2017/05/15/wannacry-o-que-se-sabe.html"/>
+   <link href="http://localhost:4000/ransonware/2017/05/15/wannacry-o-que-se-sabe.html"/>
    <updated>2017-05-15T00:00:00-03:00</updated>
-   <id>https://www.humbertojunior.com.br/ransonware/2017/05/15/wannacry-o-que-se-sabe</id>
+   <id>http://localhost:4000/ransonware/2017/05/15/wannacry-o-que-se-sabe</id>
    <content type="html">&lt;p&gt;Nas rodas de bate-papo sobre Tecnologia não se fala de outra coisa: O apagão do Wannacry. Alguns sempre repetem uma brincadeira que se tornou bordão depois que uns áudios compartilhados no Whatsapp falam que a Sexta-feira é o “dia da maldade”. Bem, se é o dia da maldade não podemos afirmar. Porém, as estatísticas falam que nos fins de semana a quantidade de ataques a sistemas de informação praticamente triplicam, e não foi diferente e pelo menos coincidência que um dos maiores cyber-ataques autônomos a sistemas já registrado foi realizado no último fim de semana.
 Mas então, o que seria esse tal de Wannacry?&lt;!--more--&gt;&lt;/p&gt;
 
