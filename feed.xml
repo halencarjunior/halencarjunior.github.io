@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://www.humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-01-22T22:19:19-03:00</updated><id>https://www.humbertojunior.com.br/feed.xml</id><title type="html">bt0</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>bt0</name></author><entry><title type="html">Installing GVM on Kali Linux 2020</title><link href="https://www.humbertojunior.com.br/infosec/2021/01/22/installing-gvm-kali-linux.html" rel="alternate" type="text/html" title="Installing GVM on Kali Linux 2020" /><published>2021-01-22T00:00:00-03:00</published><updated>2021-01-22T00:00:00-03:00</updated><id>https://www.humbertojunior.com.br/infosec/2021/01/22/installing-gvm-kali-linux</id><content type="html" xml:base="https://www.humbertojunior.com.br/infosec/2021/01/22/installing-gvm-kali-linux.html">&lt;h2 id=&quot;greenbone-vulnerability-manager-old-openvas&quot;&gt;Greenbone Vulnerability Manager (Old OpenVAS)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://www.humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-02-16T12:06:23-03:00</updated><id>https://www.humbertojunior.com.br/feed.xml</id><title type="html">bt0</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>bt0</name></author><entry><title type="html">LFI Parameters List</title><link href="https://www.humbertojunior.com.br/infosec/2021/02/16/lfi-parameters.html" rel="alternate" type="text/html" title="LFI Parameters List" /><published>2021-02-16T00:00:00-03:00</published><updated>2021-02-16T00:00:00-03:00</updated><id>https://www.humbertojunior.com.br/infosec/2021/02/16/lfi-parameters</id><content type="html" xml:base="https://www.humbertojunior.com.br/infosec/2021/02/16/lfi-parameters.html">&lt;h2 id=&quot;lfi-local-file-inclusion&quot;&gt;LFI (Local File Inclusion)&lt;/h2&gt;
+
+&lt;p&gt;Local file inclusion (also known as LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application. This vulnerability occurs, for example, when a page receives, as input, the path to the file that has to be included and this input is not properly sanitized, allowing directory traversal characters (such as dot-dot-slash) to be injected. Although most examples point to vulnerable PHP scripts, we should keep in mind that it is also common in other technologies such as JSP, ASP and others. [1]
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;script async=&quot;&quot; src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-5149953309426611&quot; data-ad-slot=&quot;3196203233&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+     (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Example of test:&lt;/p&gt;
+
+&lt;p&gt;Consider the URL&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; http://vulnerable_host/preview.php?file=example.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The parameter file= could be exploited to point it to another file within the server&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; http://vulnerable_host/preview.php?file=../../../../etc/passwd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The expected result is shown below:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; root:x:0:0:root:/root:/bin/bash
+ bin:x:1:1:bin:/bin:/sbin/nologin
+ daemon:x:2:2:daemon:/sbin:/sbin/nologin
+ alex:x:500:500:alex:/home/alex:/bin/bash
+ margo:x:501:501::/home/margo:/bin/bash
+ ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There is a list of most common parameters to test for LFI&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ?cat=
+ ?dir=
+ ?action=
+ ?board=
+ ?date=
+ ?detail=
+ ?file=
+ ?download=
+ ?path=
+ ?folder=
+ ?prefix=
+ ?include=
+ ?page=
+ ?inc=
+ ?locate=
+ ?show=
+ ?doc=
+ ?site=
+ ?type=
+ ?view=
+ ?content=
+ ?document=
+ ?layout=
+ ?mod=
+ ?conf=
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can use Google Hacking and dorks to find vulnerable targets like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; inurl:&quot;wp-license.php?file=../..//wp-config&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;File contain password and directory traversal vulnerability [2]&lt;/p&gt;
+
+&lt;p&gt;Using the same strategy to exploit wordpress and retrieve the wp-config, you could use all those parameters above and create your own Google Hacking Dork to analyze your target.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; inurl:&quot;?cat=&quot; site:&quot;example.com&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;p&gt;[1] &lt;a href=&quot;https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion&quot;&gt;OWASP TOP 10 - LFI&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2] &lt;a href=&quot;https://www.exploit-db.com/ghdb/4940&quot;&gt;GHDB&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks for following!&lt;/p&gt;</content><author><name>bt0</name></author><category term="infosec" /><category term="vulnerability" /><summary type="html">LFI (Local File Inclusion) Local file inclusion (also known as LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application. This vulnerability occurs, for example, when a page receives, as input, the path to the file that has to be included and this input is not properly sanitized, allowing directory traversal characters (such as dot-dot-slash) to be injected. Although most examples point to vulnerable PHP scripts, we should keep in mind that it is also common in other technologies such as JSP, ASP and others. [1]</summary></entry><entry><title type="html">Installing GVM on Kali Linux 2020</title><link href="https://www.humbertojunior.com.br/infosec/2021/01/22/installing-gvm-kali-linux.html" rel="alternate" type="text/html" title="Installing GVM on Kali Linux 2020" /><published>2021-01-22T00:00:00-03:00</published><updated>2021-01-22T00:00:00-03:00</updated><id>https://www.humbertojunior.com.br/infosec/2021/01/22/installing-gvm-kali-linux</id><content type="html" xml:base="https://www.humbertojunior.com.br/infosec/2021/01/22/installing-gvm-kali-linux.html">&lt;h2 id=&quot;greenbone-vulnerability-manager-old-openvas&quot;&gt;Greenbone Vulnerability Manager (Old OpenVAS)&lt;/h2&gt;
 
 &lt;p&gt;Here is a list of commands to install GVM on Kali Linux 2020. I have compiled the commands after tried to install using source code. So, Kali Linux has the bin package to install it using apt.
 &lt;!--more--&gt;&lt;/p&gt;
@@ -716,35 +797,4 @@ Livro: Códigos &amp;amp; Cifras da Antiguidade à era Moderna&lt;/p&gt;</conten
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://1drv.ms/1Cdfmng&quot;&gt;Laboratório 2&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>bt0</name></author><category term="redes de computadores" /><category term="softwares" /><summary type="html">O Packet Tracer é um software desenvolvido pela CISCO que simula um ambiente de Laboratório onde o estudante pode criar redes virtuais com diversos componentes de Redes como Roteadores, Switches, Computadores, etc…Abaixo segue um vídeo mostrando como fazer o download, instalação e tradução para o Português, porém, estou disponibilizando links para download do software diretamente aqui no blog.</summary></entry><entry><title type="html">Distribuições Linux para Auditoria – Segurança da Informação (Atualizado)</title><link href="https://www.humbertojunior.com.br/infosec/2019/06/12/distribuicoes-para-praticar-infosec.html" rel="alternate" type="text/html" title="Distribuições Linux para Auditoria – Segurança da Informação (Atualizado)" /><published>2019-06-12T00:00:00-03:00</published><updated>2019-06-12T00:00:00-03:00</updated><id>https://www.humbertojunior.com.br/infosec/2019/06/12/distribuicoes-para-praticar-infosec</id><content type="html" xml:base="https://www.humbertojunior.com.br/infosec/2019/06/12/distribuicoes-para-praticar-infosec.html">&lt;p&gt;Nesse post vou listar algumas distribuições que são usadas por muitos profissionais de Segurança da Informação para desenvolver suas pesquisas, seus artigos, tutoriais relacionados à exploração de falhas em diversos ambientes. Em outras oportunidades falarei de algumas outras ferramentas mais específicas para análise de vulnerabilidades.
-&lt;!--more--&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Kali Linux&lt;/strong&gt; (https://www.kali.org/) – Distribuição mais conhecida e mais utilizada. Possui ferramentas diversas de auditoria de Redes ethernet e Wireless, Sistemas Web… Baseada em Ubuntu Linux&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/images/kali-linux-box.png&quot; alt=&quot;Kali by Offensive Security&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Backbox&lt;/strong&gt; (www.backbox.org) – Distribuição concorrente do Kali Linux. Também possui praticamente as ferramentas mais conhecidas assim como seu outro concorrente. Também baseada em Ubuntu Linux&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/images/backbox1.jpg&quot; alt=&quot;Backbox&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;SamuraiWFT&lt;/strong&gt; (http://www.samurai-wtf.org/) – Distribuição focada em auditoria de Sistemas e Análise Forense&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/images/samurai.jpg&quot; alt=&quot;SamuraiWTF&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;BackTrack Linux&lt;/strong&gt; (http://www.backtrack-linux.org/) – Essa distribuição, apesar de não ser mais continuada, ainda é bem utilizada por algumas pessoas para desenvolver tutoriais sobre Exploração de vulnerabilidades. O Kali Linux é a continuação deste trabalho.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/images/backtrack.jpg&quot; alt=&quot;Backtrack&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tails&lt;/strong&gt; (https://tails.boum.org/index.pt.html) – Distribuição focada em privacidade. Desenvolvida pela comunidade Tor (https://www.torproject.org/)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bugtraq&lt;/strong&gt; (http://bugtraq-team.com/downloads) – Distribuição concorrente do Kali Linux – Versões em Debian, Ubuntu e Suse&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;CyborgHawk&lt;/strong&gt; – Distribuição relativamente nova para Pentests (http://sourceforge.net/projects/cyborghawk1/)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Parrot OS&lt;/strong&gt; - Distribuição muito utilizada também como alternativa ao Kali Linux (https://parrotlinux.org/), com versões para Desktop (usuário normal) e para auditoria em sistemas.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/images/parrot-security-os-linux.png&quot; alt=&quot;Parrot OS&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Black Arch&lt;/strong&gt; - Baseada no Arch Linux, ótima distribuição com diversas ferramentas de auditoria (https://blackarch.org)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/images/blackarch.png&quot; alt=&quot;Black Arch&quot; /&gt;&lt;/p&gt;</content><author><name>bt0</name></author><category term="infosec" /><category term="distribuicoes" /><summary type="html">Nesse post vou listar algumas distribuições que são usadas por muitos profissionais de Segurança da Informação para desenvolver suas pesquisas, seus artigos, tutoriais relacionados à exploração de falhas em diversos ambientes. Em outras oportunidades falarei de algumas outras ferramentas mais específicas para análise de vulnerabilidades.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>bt0</name></author><category term="redes de computadores" /><category term="softwares" /><summary type="html">O Packet Tracer é um software desenvolvido pela CISCO que simula um ambiente de Laboratório onde o estudante pode criar redes virtuais com diversos componentes de Redes como Roteadores, Switches, Computadores, etc…Abaixo segue um vídeo mostrando como fazer o download, instalação e tradução para o Português, porém, estou disponibilizando links para download do software diretamente aqui no blog.</summary></entry></feed>

