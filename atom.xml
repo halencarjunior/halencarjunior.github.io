@@ -4,7 +4,7 @@
  <title>bt0</title>
  <link href="https://www.humbertojunior.com.br/atom.xml" rel="self"/>
  <link href="https://www.humbertojunior.com.br/"/>
- <updated>2021-02-16T12:06:23-03:00</updated>
+ <updated>2021-02-16T12:19:34-03:00</updated>
  <id>https://www.humbertojunior.com.br</id>
  <author>
    <name>bt0</name>
@@ -94,7 +94,7 @@
 
 &lt;p&gt;References:&lt;/p&gt;
 
-&lt;p&gt;[1] &lt;a href=&quot;https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion&quot;&gt;OWASP TOP 10 - LFI&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[1] &lt;a href=&quot;https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion&quot;&gt;OWASP - LFI&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[2] &lt;a href=&quot;https://www.exploit-db.com/ghdb/4940&quot;&gt;GHDB&lt;/a&gt;&lt;/p&gt;
 
