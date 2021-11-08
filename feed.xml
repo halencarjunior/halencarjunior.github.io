@@ -1,4 +1,151 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-11-08T14:43:19-03:00</updated><id>https://humbertojunior.com.br/feed.xml</id><title type="html">bt0’s Security Blog</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><entry><title type="html">LFI Parameters List</title><link href="https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters.html" rel="alternate" type="text/html" title="LFI Parameters List" /><published>2021-02-16T00:00:00-03:00</published><updated>2021-02-16T00:00:00-03:00</updated><id>https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters</id><content type="html" xml:base="https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters.html">&lt;h2 id=&quot;lfi-local-file-inclusion&quot;&gt;LFI (Local File Inclusion)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-11-08T18:58:21-03:00</updated><id>https://humbertojunior.com.br/feed.xml</id><title type="html">bt0’s Security Blog</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><entry><title type="html">BugBuntu Linux</title><link href="https://humbertojunior.com.br/infosec/pentest/bugbounty/tools/2021/11/08/bugbuntu-linux.html" rel="alternate" type="text/html" title="BugBuntu Linux" /><published>2021-11-08T00:00:00-03:00</published><updated>2021-11-08T00:00:00-03:00</updated><id>https://humbertojunior.com.br/infosec/pentest/bugbounty/tools/2021/11/08/bugbuntu-linux</id><content type="html" xml:base="https://humbertojunior.com.br/infosec/pentest/bugbounty/tools/2021/11/08/bugbuntu-linux.html">&lt;h1 id=&quot;bugbuntu-linux-v012&quot;&gt;BugBuntu Linux v0.1.2&lt;/h1&gt;
+
+&lt;p&gt;Hello, this is our first alphabeta test version of BugBuntu&lt;/p&gt;
+
+&lt;p&gt;This little project is based on Tips from King of Bug Bounty repository&lt;/p&gt;
+
+&lt;p&gt;BugBuntu is a customized distro based on Ubuntu 18.04 and focused on Bug Bounty tools.&lt;/p&gt;
+
+&lt;p&gt;Some installed tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Amass&lt;/li&gt;
+  &lt;li&gt;Anew&lt;/li&gt;
+  &lt;li&gt;Anti-burl&lt;/li&gt;
+  &lt;li&gt;Assetfinder&lt;/li&gt;
+  &lt;li&gt;CF-check&lt;/li&gt;
+  &lt;li&gt;Chaos&lt;/li&gt;
+  &lt;li&gt;Dalfox&lt;/li&gt;
+  &lt;li&gt;DNSgen&lt;/li&gt;
+  &lt;li&gt;Filter-resolved&lt;/li&gt;
+  &lt;li&gt;Findomain&lt;/li&gt;
+  &lt;li&gt;Fuff&lt;/li&gt;
+  &lt;li&gt;Gargs&lt;/li&gt;
+  &lt;li&gt;Gau&lt;/li&gt;
+  &lt;li&gt;Gf&lt;/li&gt;
+  &lt;li&gt;Github-Search&lt;/li&gt;
+  &lt;li&gt;Gospider&lt;/li&gt;
+  &lt;li&gt;Gowitness&lt;/li&gt;
+  &lt;li&gt;Hakrawler&lt;/li&gt;
+  &lt;li&gt;HakrevDNS&lt;/li&gt;
+  &lt;li&gt;Haktldextract&lt;/li&gt;
+  &lt;li&gt;Html-tool&lt;/li&gt;
+  &lt;li&gt;Httpx&lt;/li&gt;
+  &lt;li&gt;Jaeles&lt;/li&gt;
+  &lt;li&gt;Jsubfinder&lt;/li&gt;
+  &lt;li&gt;Kxss&lt;/li&gt;
+  &lt;li&gt;LinkFinder&lt;/li&gt;
+  &lt;li&gt;Metabigor&lt;/li&gt;
+  &lt;li&gt;MassDNS&lt;/li&gt;
+  &lt;li&gt;Naabu&lt;/li&gt;
+  &lt;li&gt;Qsreplace&lt;/li&gt;
+  &lt;li&gt;Rush&lt;/li&gt;
+  &lt;li&gt;SecretFinder&lt;/li&gt;
+  &lt;li&gt;ShuffleDNS&lt;/li&gt;
+  &lt;li&gt;SQLMap&lt;/li&gt;
+  &lt;li&gt;Subfinder&lt;/li&gt;
+  &lt;li&gt;SubJS&lt;/li&gt;
+  &lt;li&gt;Unew&lt;/li&gt;
+  &lt;li&gt;Unfurl&lt;/li&gt;
+  &lt;li&gt;WaybackURLs&lt;/li&gt;
+  &lt;li&gt;Notify&lt;/li&gt;
+  &lt;li&gt;Goop&lt;/li&gt;
+  &lt;li&gt;Tojson&lt;/li&gt;
+  &lt;li&gt;getJS&lt;/li&gt;
+  &lt;li&gt;x8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Other Tools Installed:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;nuclei&lt;/li&gt;
+  &lt;li&gt;InurlBR Scanner (New version by @MrCl0wnLab)&lt;/li&gt;
+  &lt;li&gt;jexboss&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;screenshots&quot;&gt;Screenshots:&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://imgur.com/IvTEAiX.jpg&quot; alt=&quot;BugBuntu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://imgur.com/6cL505V.jpg&quot; alt=&quot;BugBuntu&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;you-can-download-the-ova-for-virtualbox-using-the-link-below&quot;&gt;You can download the OVA (For Virtualbox) using the link below:&lt;/h2&gt;
+
+&lt;p&gt;Via Sourceforge:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://sourceforge.net/projects/bugbuntu/&quot;&gt;&lt;img src=&quot;https://a.fsdn.com/con/app/sf-download-button&quot; alt=&quot;Download BugBuntu&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://sourceforge.net/projects/bugbuntu/&quot;&gt;&lt;img src=&quot;https://img.shields.io/sourceforge/dm/bugbuntu.svg&quot; alt=&quot;Download BugBuntu&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Default login and pwd are bugbuntu:bugbuntu&lt;/p&gt;
+
+&lt;h2 id=&quot;collaborators&quot;&gt;Collaborators&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/halencarjunior&quot;&gt;bt0&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/MrCl0wnLab&quot;&gt;MrCl0wn&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/KingOfBugbounty&quot;&gt;OFJAAAH&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><category term="infosec" /><category term="pentest" /><category term="BugBounty" /><category term="tools" /><summary type="html">BugBuntu Linux v0.1.2</summary></entry><entry><title type="html">BugBuntu Linux</title><link href="https://humbertojunior.com.br/infosec/pentest/bugbounty/tools/2021/11/08/sss3-simple-storage-scanner.html" rel="alternate" type="text/html" title="BugBuntu Linux" /><published>2021-11-08T00:00:00-03:00</published><updated>2021-11-08T00:00:00-03:00</updated><id>https://humbertojunior.com.br/infosec/pentest/bugbounty/tools/2021/11/08/sss3-simple-storage-scanner</id><content type="html" xml:base="https://humbertojunior.com.br/infosec/pentest/bugbounty/tools/2021/11/08/sss3-simple-storage-scanner.html">&lt;h1 id=&quot;sss3&quot;&gt;SSS3&lt;/h1&gt;
+&lt;h2 id=&quot;simple-storage-scanner&quot;&gt;&lt;em&gt;Simple Storage Scanner&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl-3.0&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/License-GPL%20v3-blue.svg&quot; alt=&quot;License: GPL v3&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;SSS3 is a simple S3 Bucket testing software. It uses aws cli to search for public buckets in a list of domains/subdomains.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-requirements&quot;&gt;Basic Requirements&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It requires aws cli installed and configured with a s3 policy defined&lt;/li&gt;
+  &lt;li&gt;You should have a list of previous enumerated domains/subdomains&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Iterates a list of domains/subdomains&lt;/li&gt;
+  &lt;li&gt;Tests if a domain/subdomain respond to a bucket and if its permissions for listing are enabled&lt;/li&gt;
+  &lt;li&gt;Export the result of listing of buckets found&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Clone the repository, give +x to script and be happy
+SSS3 requires &lt;a href=&quot;https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html&quot;&gt;AWS CLI&lt;/a&gt; to run.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/halencarjunior/sss3.git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x sss3.sh
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./ss3.sh domain.txt &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; output.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;usage-example&quot;&gt;Usage example&lt;/h2&gt;
+
+&lt;p&gt;You could start enumerating a domain using &lt;a href=&quot;https://github.com/OWASP/Amass/blob/master/doc/user_guide.md&quot;&gt;Amass&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;amass enum &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; example.com &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; domains-example-com.txt
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./sss3.sh domains-example-com.txt &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; output-example-com.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://asciinema.org/a/uDBv5uQ60Mtlc868lsfWZAJ5O&quot;&gt;&lt;img src=&quot;https://asciinema.org/a/uDBv5uQ60Mtlc868lsfWZAJ5O.svg&quot; alt=&quot;asciicast&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;development&quot;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;Want to contribute? Great! Please send your PR for us and we’ll be greateful for your help.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;I am grateful for some articles that motivated me to creat that tool&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://sidechannel.blog/enumerando-servicos-em-contas-aws-amazon-web-services-de-forma-anonima-e-nao-autenticada/index.html&quot;&gt;Sidechannel Article by Rodrigo Montoro&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://rhinosecuritylabs.com/penetration-testing/penetration-testing-aws-storage/&quot;&gt;Rhynosec Article for Pentesting S3&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks for using and help to share please&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Free Software, Hell Yeah!&lt;/strong&gt;&lt;/p&gt;</content><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><category term="infosec" /><category term="pentest" /><category term="BugBounty" /><category term="tools" /><summary type="html">SSS3 Simple Storage Scanner</summary></entry><entry><title type="html">LFI Parameters List</title><link href="https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters.html" rel="alternate" type="text/html" title="LFI Parameters List" /><published>2021-02-16T00:00:00-03:00</published><updated>2021-02-16T00:00:00-03:00</updated><id>https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters</id><content type="html" xml:base="https://humbertojunior.com.br/infosec/pentest/2021/02/16/lfi-parameters.html">&lt;h2 id=&quot;lfi-local-file-inclusion&quot;&gt;LFI (Local File Inclusion)&lt;/h2&gt;
 
 &lt;p&gt;Local file inclusion (also known as LFI) is the process of including
 files, that are already locally present on the server, through the
@@ -858,92 +1005,4 @@ download do software diretamente aqui no blog.&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://1drv.ms/1Cdfmng&quot;&gt;Laboratório 2&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><category term="redes" /><summary type="html">O Packet Tracer é um software desenvolvido pela CISCO que simula um ambiente de Laboratório onde o estudante pode criar redes virtuais com diversos componentes de Redes como Roteadores, Switches, Computadores, etc…Abaixo segue um vídeo mostrando como fazer o download, instalação e tradução para o Português, porém, estou disponibilizando links para download do software diretamente aqui no blog.</summary></entry><entry><title type="html">WANNACRY, O que já se sabe sobre o ataque que alertou o mundo?</title><link href="https://humbertojunior.com.br/ransonware/2017/05/15/wannacry-o-que-se-sabe.html" rel="alternate" type="text/html" title="WANNACRY, O que já se sabe sobre o ataque que alertou o mundo?" /><published>2017-05-15T00:00:00-03:00</published><updated>2017-05-15T00:00:00-03:00</updated><id>https://humbertojunior.com.br/ransonware/2017/05/15/wannacry-o-que-se-sabe</id><content type="html" xml:base="https://humbertojunior.com.br/ransonware/2017/05/15/wannacry-o-que-se-sabe.html">&lt;p&gt;Nas rodas de bate-papo sobre Tecnologia não se fala de outra coisa: O
-apagão do Wannacry. Alguns sempre repetem uma brincadeira que se tornou
-bordão depois que uns áudios compartilhados no Whatsapp falam que a
-Sexta-feira é o “dia da maldade”. Bem, se é o dia da maldade não podemos
-afirmar. Porém, as estatísticas falam que nos fins de semana a
-quantidade de ataques a sistemas de informação praticamente triplicam, e
-não foi diferente e pelo menos coincidência que um dos maiores
-cyber-ataques autônomos a sistemas já registrado foi realizado no último
-fim de semana. Mas então, o que seria esse tal de Wannacry?&lt;/p&gt;
-
-&lt;p&gt;O Wannacry é um Ransonware, um código malicioso que infecta sistemas e
-que “sequestra” os dados da vítima utilizando criptografia para deixar
-os dados inacessíveis. Os atacantes então pedem um “resgate” para que a
-criptografia seja desfeita e os dados sejam devolvidos para a vítima. A
-forma mais comum de infecção é via e-mail com links maliciosos para
-sites com o código embutido em alguns tipos de documentos mais
-conhecidos como: doc, .dot, .tiff, .java, .psd, .docx, .xls, .pps, .txt,
-ou .mpeg. Vale salientar que o ataque funciona em sistemas Windows
-desatualizados. E como surgiu o Wannacry?&lt;/p&gt;
-
-&lt;p&gt;O Wannacry é uma variante de um malware da família wanna e diversas
-teorias falam sobre o surgimento na China e até mesmo no Brasil.
-Noticiários também apontam o vazamento de documentos da NSA (National
-Security Agency), órgão de Inteligência dos Estados Unidos, que
-continham informações sobre uma vulnerabilidade em sistemas Windows
-(Microsoft) e que poderiam ser invadidos facilmente. Após o vazamento
-dessas informações a empresa de Bill Gates providenciou rapidamente uma
-atualização no mẽs de Março para os sistemas afetados. O Wannacry então
-teria aproveitado dessa vulnerabilidade conhecida para atacar sistemas
-Windows. Quem foi afetado?&lt;/p&gt;
-
-&lt;p&gt;A empresa européia Telefônica foi uma das primeiras a admitir a infecção
-em massa. No Reino Unido a rede de hospitais NHS. Nos Estados Unidos
-grandes empresas foram infectadas como a FedEX. No Brasil tivemos
-relatos de infecções na Telefônica/Vivo, em São Paulo, a Petrobras, o
-Tribunal de Justiça de São Paulo, o Tribunal Regional do Trabalho de São
-Paulo e o Ministério Público do Estado de São Paulo, que retiraram seus
-sites do ar. E agora?&lt;/p&gt;
-
-&lt;p&gt;No sábado passado foi divulgado por alguns noticiários como o The
-Guardian e contas de profissionais de Segurança da Informação no twitter
-que o malware fora bloqueado por um pesquisador que mantêm um blog
-especializado (malwaretech.com), porém, já avisando que o bloqueio pode
-ser temporário.&lt;/p&gt;
-
-&lt;p&gt;O que fazer para não ser afetado pelo ataque?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Não abrir e-mails ou links desconhecidos (Meio mais comum de
-infecção)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Mantenha sempre um backup de seus dados em um disco externo&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Mantenha seu Sistema Operacional sempre atualizado&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Utilize Software legítimo&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Mantenha um antivírus confiável atualizado&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;A Microsoft liberou boletins sobre as vulnerabilidades nos links
-MS17-015, MS17-012 e MS17-010 e atualizou o Windows Defender com
-assinaturas do Malware. Em caso de infecção a recomendação é para NUNCA
-PAGAR o resgate pois isso apenas incentiva a prática e também porque não
-há garantia de que isso dará acesso à chave prometida pela extorsão. O
-resgate é pedido na criptomoeda digital Bitcoin e varia entre 300 e 600
-dólares, podendo aumentar com o tempo.&lt;/p&gt;
-
-&lt;p&gt;Apesar do bloqueio temporário, as autoridades e pesquisadores de
-Segurança da Informação já estão aguardando novas variantes do malware
-com correções que consigam explorar a falha mesmo com as medidas
-utilizadas.&lt;/p&gt;
-
-&lt;p&gt;UPDATE:&lt;/p&gt;
-
-&lt;p&gt;Novas variantes do Wannacry já estão ativas e não dependems mais de um
-domínio para funcionar e também sem formas de desativar o ataque.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/wannacry3.png&quot; alt=&quot;wannacry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Portanto, caso não tenha feito o seu backup ainda e não tenha atualizado
-seu Windows, FAÇA! A não ser que queira realmente chorar perdas
-irrecuperáveis.&lt;/p&gt;</content><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><category term="ransonware" /><summary type="html">Nas rodas de bate-papo sobre Tecnologia não se fala de outra coisa: O apagão do Wannacry. Alguns sempre repetem uma brincadeira que se tornou bordão depois que uns áudios compartilhados no Whatsapp falam que a Sexta-feira é o “dia da maldade”. Bem, se é o dia da maldade não podemos afirmar. Porém, as estatísticas falam que nos fins de semana a quantidade de ataques a sistemas de informação praticamente triplicam, e não foi diferente e pelo menos coincidência que um dos maiores cyber-ataques autônomos a sistemas já registrado foi realizado no último fim de semana. Mas então, o que seria esse tal de Wannacry?</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><category term="redes" /><summary type="html">O Packet Tracer é um software desenvolvido pela CISCO que simula um ambiente de Laboratório onde o estudante pode criar redes virtuais com diversos componentes de Redes como Roteadores, Switches, Computadores, etc…Abaixo segue um vídeo mostrando como fazer o download, instalação e tradução para o Português, porém, estou disponibilizando links para download do software diretamente aqui no blog.</summary></entry></feed>
