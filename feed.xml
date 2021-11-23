@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-11-23T09:53:57-03:00</updated><id>https://humbertojunior.com.br/feed.xml</id><title type="html">bt0’s Security Blog</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><entry><title type="html">Black Friday Infosec Deals</title><link href="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html" rel="alternate" type="text/html" title="Black Friday Infosec Deals" /><published>2021-11-23T00:00:00-03:00</published><updated>2021-11-23T00:00:00-03:00</updated><id>https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021</id><content type="html" xml:base="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html">&lt;h1 id=&quot;black-friday-deals---2021&quot;&gt;Black Friday Deals - 2021&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-11-23T09:58:18-03:00</updated><id>https://humbertojunior.com.br/feed.xml</id><title type="html">bt0’s Security Blog</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><entry><title type="html">Black Friday Infosec Deals</title><link href="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html" rel="alternate" type="text/html" title="Black Friday Infosec Deals" /><published>2021-11-23T00:00:00-03:00</published><updated>2021-11-23T00:00:00-03:00</updated><id>https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021</id><content type="html" xml:base="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html">&lt;h1 id=&quot;black-friday-deals---2021&quot;&gt;Black Friday Deals - 2021&lt;/h1&gt;
 &lt;h2 id=&quot;deals-repository&quot;&gt;&lt;em&gt;Deals Repository&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl-3.0&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/License-GPL%20v3-blue.svg&quot; alt=&quot;License: GPL v3&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Some deals compiled from:
-https://github.com/0x90n/InfoSec-Black-Friday/blob/master/README.md&lt;/p&gt;
+(https://github.com/0x90n/InfoSec-Black-Friday/blob/master/README.md)&lt;/p&gt;
 
 &lt;h1 id=&quot;infosec-black-friday-deals-2021&quot;&gt;InfoSec Black Friday Deals 2021&lt;/h1&gt;
 &lt;p&gt;All the deals for InfoSec related software/tools this Black Friday / Cyber Monday, for all the hackers that saved $$$ during lockdowns.&lt;/p&gt;
@@ -27,14 +27,16 @@ The below deals have either publicly announced they’ll be doing a deal or high
 &lt;h3 id=&quot;can-i-add-deals-to-the-page&quot;&gt;Can I add deals to the page?&lt;/h3&gt;
 &lt;p&gt;Yes, please follow formatting guidelines, provide a source and code. Has to be infosec related.&lt;/p&gt;
 
-&lt;p&gt;:see_no_evil: means 1) Limited to first x users 2) Great deal or 3) Highly recommended&lt;/p&gt;
+&lt;p&gt;:see_no_evil: means 
+    1) Limited to first x users 
+    2) Great deal or 3) Highly recommended&lt;/p&gt;
 
 &lt;p&gt;*Disclaimer: I have included my own, and other discount codes sent in directly.&lt;/p&gt;
 
 &lt;h2 id=&quot;newsletters&quot;&gt;Newsletters&lt;/h2&gt;
 
 &lt;p&gt;Return on Security&lt;br /&gt;
-https://www.returnonsecurity.com/black-friday-25 &lt;br /&gt;
+(https://www.returnonsecurity.com/black-friday-25) &lt;br /&gt;
 25% off the &lt;a href=&quot;https://www.returnonsecurity.com/pro-reports/&quot;&gt;Pro Membership&lt;/a&gt; for 3 months with code: black-friday-25&lt;/p&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
