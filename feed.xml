@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-11-23T10:39:13-03:00</updated><id>https://humbertojunior.com.br/feed.xml</id><title type="html">bt0’s Security Blog</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><entry><title type="html">Black Friday Infosec Deals</title><link href="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html" rel="alternate" type="text/html" title="Black Friday Infosec Deals" /><published>2021-11-23T00:00:00-03:00</published><updated>2021-11-23T00:00:00-03:00</updated><id>https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021</id><content type="html" xml:base="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html">&lt;h1 id=&quot;black-friday-deals---2021&quot;&gt;Black Friday Deals - 2021&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-11-23T10:42:40-03:00</updated><id>https://humbertojunior.com.br/feed.xml</id><title type="html">bt0’s Security Blog</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><entry><title type="html">Black Friday Infosec Deals</title><link href="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html" rel="alternate" type="text/html" title="Black Friday Infosec Deals" /><published>2021-11-23T00:00:00-03:00</published><updated>2021-11-23T00:00:00-03:00</updated><id>https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021</id><content type="html" xml:base="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html">&lt;h1 id=&quot;black-friday-deals---2021&quot;&gt;Black Friday Deals - 2021&lt;/h1&gt;
 &lt;h2 id=&quot;deals-repository&quot;&gt;&lt;em&gt;Deals Repository&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl-3.0&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/License-GPL%20v3-blue.svg&quot; alt=&quot;License: GPL v3&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -26,13 +26,8 @@ The below deals have either publicly announced they’ll be doing a deal or high
 &lt;h3 id=&quot;can-i-add-deals-to-the-page&quot;&gt;Can I add deals to the page?&lt;/h3&gt;
 &lt;p&gt;Yes, please follow formatting guidelines, provide a source and code. Has to be infosec related.&lt;/p&gt;
 
-&lt;p&gt;means \&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1) Limited to first x users 
-2) Great deal or 3) Highly recommended
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;*Disclaimer: I have included my own, and other discount codes sent in directly.&lt;/p&gt;
+&lt;p&gt;refers to &lt;a href=&quot;https://github.com/0x90n/InfoSec-Black-Friday/blob/master/README.md&quot;&gt;https://github.com/0x90n/InfoSec-Black-Friday/blob/master/README.md&lt;/a&gt;
+Please help updating this repo&lt;/p&gt;
 
 &lt;h2 id=&quot;newsletters&quot;&gt;Newsletters&lt;/h2&gt;
 
