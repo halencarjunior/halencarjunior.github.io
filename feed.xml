@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-11-23T10:16:07-03:00</updated><id>https://humbertojunior.com.br/feed.xml</id><title type="html">bt0’s Security Blog</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><entry><title type="html">Black Friday Infosec Deals</title><link href="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html" rel="alternate" type="text/html" title="Black Friday Infosec Deals" /><published>2021-11-23T00:00:00-03:00</published><updated>2021-11-23T00:00:00-03:00</updated><id>https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021</id><content type="html" xml:base="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html">&lt;h1 id=&quot;black-friday-deals---2021&quot;&gt;Black Friday Deals - 2021&lt;/h1&gt;
-=======
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-11-23T10:10:29-03:00</updated><id>https://humbertojunior.com.br/feed.xml</id><title type="html">bt0’s Security Blog</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><entry><title type="html">Black Friday Infosec Deals</title><link href="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html" rel="alternate" type="text/html" title="Black Friday Infosec Deals" /><published>2021-11-23T00:00:00-03:00</published><updated>2021-11-23T00:00:00-03:00</updated><id>https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021</id><content type="html" xml:base="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html">&lt;h1 id=&quot;black-friday-deals---2021&quot;&gt;Black Friday Deals - 2021&lt;/h1&gt;
->>>>>>> 33a70e7906b158513ae48763708d732c0c0fcf3c
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://humbertojunior.com.br/feed.xml" rel="self" type="application/atom+xml" /><link href="https://humbertojunior.com.br/" rel="alternate" type="text/html" /><updated>2021-11-23T10:39:13-03:00</updated><id>https://humbertojunior.com.br/feed.xml</id><title type="html">bt0’s Security Blog</title><subtitle>Just another Infosec Blog - Resources, Tutorial</subtitle><author><name>Humberto Jr (bt0)</name><email>bt0@tutanota.com</email></author><entry><title type="html">Black Friday Infosec Deals</title><link href="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html" rel="alternate" type="text/html" title="Black Friday Infosec Deals" /><published>2021-11-23T00:00:00-03:00</published><updated>2021-11-23T00:00:00-03:00</updated><id>https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021</id><content type="html" xml:base="https://humbertojunior.com.br/bfriday/2021/11/23/black-friday-deals-2021.html">&lt;h1 id=&quot;black-friday-deals---2021&quot;&gt;Black Friday Deals - 2021&lt;/h1&gt;
 &lt;h2 id=&quot;deals-repository&quot;&gt;&lt;em&gt;Deals Repository&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl-3.0&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/License-GPL%20v3-blue.svg&quot; alt=&quot;License: GPL v3&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -14,13 +10,11 @@ Use the above link for updates&lt;/p&gt;
 &lt;p&gt;All the deals for InfoSec related software/tools this Black Friday / Cyber Monday, for all the hackers that saved $$$ during lockdowns.&lt;/p&gt;
 
 &lt;p&gt;Heard of an early deal? Let’s get this rolling 🎉
-The below deals have either publicly announced they’ll be doing a deal or highly expected.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;All USD&lt;/li&gt;
-  &lt;li&gt;All End times in UTC&lt;/li&gt;
-  &lt;li&gt;DYOR and AYOR: I have not vetted links for legitimacy&lt;/li&gt;
-  &lt;li&gt;Some deals use my handle for tracking - these are not referral/affiliate/commission&lt;/li&gt;
-&lt;/ul&gt;
+The below deals have either publicly announced they’ll be doing a deal or highly expected.
+    - All USD
+    - All End times in UTC
+    - DYOR and AYOR: I have not vetted links for legitimacy
+    - Some deals use my handle for tracking - these are not referral/affiliate/commission&lt;/p&gt;
 
 &lt;h2 id=&quot;faq&quot;&gt;FAQ&lt;/h2&gt;
 &lt;h3 id=&quot;when-do-these-sales-end&quot;&gt;When do these sales end?&lt;/h3&gt;
@@ -32,242 +26,241 @@ The below deals have either publicly announced they’ll be doing a deal or high
 &lt;h3 id=&quot;can-i-add-deals-to-the-page&quot;&gt;Can I add deals to the page?&lt;/h3&gt;
 &lt;p&gt;Yes, please follow formatting guidelines, provide a source and code. Has to be infosec related.&lt;/p&gt;
 
-&lt;p&gt;:see_no_evil: means 
-    1) Limited to first x users 
-    2) Great deal or 3) Highly recommended&lt;/p&gt;
+&lt;p&gt;means \&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1) Limited to first x users 
+2) Great deal or 3) Highly recommended
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;*Disclaimer: I have included my own, and other discount codes sent in directly.&lt;/p&gt;
 
 &lt;h2 id=&quot;newsletters&quot;&gt;Newsletters&lt;/h2&gt;
 
-&lt;p&gt;Return on Security&lt;br /&gt;
-&lt;a href=&quot;https://www.returnonsecurity.com/black-friday-25&quot;&gt;https://www.returnonsecurity.com/black-friday-25&lt;/a&gt; &lt;br /&gt;
+&lt;h5 id=&quot;return-on-security&quot;&gt;Return on Security\&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.returnonsecurity.com/black-friday-25&quot;&gt;https://www.returnonsecurity.com/black-friday-25&lt;/a&gt; &lt;br /&gt;
 25% off the &lt;a href=&quot;https://www.returnonsecurity.com/pro-reports/&quot;&gt;Pro Membership&lt;/a&gt; for 3 months with code: black-friday-25&lt;/p&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
 
-&lt;p&gt;Securestack DevSecOps platform :see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://securestack.com/black-friday-sale/&quot;&gt;https://securestack.com/black-friday-sale/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;securestack-devsecops-platform-see_no_evil&quot;&gt;Securestack DevSecOps platform :see_no_evil:\&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://securestack.com/black-friday-sale/&quot;&gt;https://securestack.com/black-friday-sale/&lt;/a&gt;&lt;br /&gt;
 30% off and 4 months subscription with code: BLACKFRIDAY21 &lt;br /&gt;
 Ends: 2nd December&lt;/p&gt;
 
-&lt;p&gt;DevUtils &lt;br /&gt;
-Offline Toolbox with Develper/Security applications&lt;br /&gt;
+&lt;h5 id=&quot;devutils-&quot;&gt;DevUtils \&lt;/h5&gt;
+&lt;p&gt;Offline Toolbox with Develper/Security applications&lt;br /&gt;
 &lt;a href=&quot;https://devutils.app/&quot;&gt;https://devutils.app/&lt;/a&gt;
 30% off with code: BLACKFRIDAY_2021S&lt;/p&gt;
 
-&lt;p&gt;GrayHatWarfare (the shodan for S3 buckets/shorteners) :see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://grayhatwarfare.com/packages&quot;&gt;https://grayhatwarfare.com/packages&lt;/a&gt;
+&lt;h5 id=&quot;grayhatwarfare-the-shodan-for-s3-bucketsshorteners-&quot;&gt;GrayHatWarfare (the shodan for S3 buckets/shorteners) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://grayhatwarfare.com/packages&quot;&gt;https://grayhatwarfare.com/packages&lt;/a&gt;
 was €300 now €160 for 1Y premium &lt;br /&gt;
 was €960 now €450 for 1Y enterprise&lt;/p&gt;
 
-&lt;p&gt;Proxyman &lt;br /&gt;
-Web Debugging Proxy macOS app for sec/devs to capture, inspect, and manipulate HTTP(s) requests/responses &lt;br /&gt;
+&lt;h5 id=&quot;proxyman-&quot;&gt;Proxyman \&lt;/h5&gt;
+&lt;p&gt;Web Debugging Proxy macOS app for sec/devs to capture, inspect, and manipulate HTTP(s) requests/responses &lt;br /&gt;
 &lt;a href=&quot;https://proxyman.io&quot;&gt;https://proxyman.io&lt;/a&gt;
 30% off with code: PROXYMAN_BLACK_FRIDAY_2021&lt;/p&gt;
 
-&lt;p&gt;Pulsedive Threat Intelligence :see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://pulsedive.com/about/pro&quot;&gt;https://pulsedive.com/about/pro&lt;/a&gt;
+&lt;h5 id=&quot;pulsedive-threat-intelligence-&quot;&gt;Pulsedive Threat Intelligence \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://pulsedive.com/about/pro&quot;&gt;https://pulsedive.com/about/pro&lt;/a&gt;
 &lt;a href=&quot;https://pulsedive.com/about/api&quot;&gt;https://pulsedive.com/about/api&lt;/a&gt;
 Incoming deal on Pulsedive Pro or API plans released on 24th November&lt;/p&gt;
 
-&lt;p&gt;Sn1per Elite Bundle &lt;br /&gt;
-&lt;a href=&quot;https://sn1persecurity.com/wordpress/black-friday-sale/&quot;&gt;https://sn1persecurity.com/wordpress/black-friday-sale/&lt;/a&gt;
+&lt;h5 id=&quot;sn1per-elite-bundle-&quot;&gt;Sn1per Elite Bundle \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://sn1persecurity.com/wordpress/black-friday-sale/&quot;&gt;https://sn1persecurity.com/wordpress/black-friday-sale/&lt;/a&gt;
 15% discount ($132 savings)&lt;br /&gt;
 Ends: 28th November&lt;/p&gt;
 
-&lt;p&gt;Workflow86 (Document/automate security operation playbooks and business processes) :see_no_evil: &lt;br /&gt;
-&lt;a href=&quot;https://news.ycombinator.com/item?id=29152173&quot;&gt;https://news.ycombinator.com/item?id=29152173&lt;/a&gt;
+&lt;h5 id=&quot;workflow86-documentautomate-security-operation-playbooks-and-business-processes-&quot;&gt;Workflow86 (Document/automate security operation playbooks and business processes) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=29152173&quot;&gt;https://news.ycombinator.com/item?id=29152173&lt;/a&gt;
 &lt;a href=&quot;https://www.workflow86.com&quot;&gt;https://www.workflow86.com&lt;/a&gt;
 30% off any plan for 3 months with code: BLACKFRIDAY2021 &lt;br /&gt;
 Ends: 30 November&lt;/p&gt;
 
-&lt;p&gt;Tenable :see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://www.tenable.com/buy&quot;&gt;https://www.tenable.com/buy&lt;/a&gt;
+&lt;h5 id=&quot;tenable-&quot;&gt;Tenable \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.tenable.com/buy&quot;&gt;https://www.tenable.com/buy&lt;/a&gt;
 50% off Nessus PRO with code: takehalf&lt;/p&gt;
 
-&lt;p&gt;Burp Bounty Pro Extension &lt;br /&gt;
-&lt;a href=&quot;https://burpbounty.net/&quot;&gt;https://burpbounty.net/&lt;/a&gt;
+&lt;h5 id=&quot;burp-bounty-pro-extension-&quot;&gt;Burp Bounty Pro Extension \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://burpbounty.net/&quot;&gt;https://burpbounty.net/&lt;/a&gt;
 &lt;a href=&quot;https://order.shareit.com/cart/add?vendorid=200287980&amp;amp;PRODUCT%5B300991779%5D=1&quot;&gt;https://order.shareit.com/cart/add?vendorid=200287980&amp;amp;PRODUCT%5B300991779%5D=1&lt;/a&gt;
 20% off with code: CYBERBOUNTY&lt;/p&gt;
 
 &lt;h2 id=&quot;courses--training&quot;&gt;Courses &amp;amp; Training&lt;/h2&gt;
 
-&lt;p&gt;7ASecurity Black friday sale on any course &lt;br /&gt;
-&lt;a href=&quot;https://store.7asecurity.com/&quot;&gt;https://store.7asecurity.com/&lt;/a&gt;
+&lt;h5 id=&quot;7asecurity-black-friday-sale-on-any-course-&quot;&gt;7ASecurity Black friday sale on any course \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://store.7asecurity.com/&quot;&gt;https://store.7asecurity.com/&lt;/a&gt;
 40% off with code: BFCM40 &lt;br /&gt;
 Ends: December 1st&lt;/p&gt;
 
-&lt;p&gt;Burp Suite Certified Practitioner &lt;br /&gt;
-&lt;a href=&quot;https://portswigger.net/blog/burp-suite-certification-prices-hacked-for-black-friday&quot;&gt;https://portswigger.net/blog/burp-suite-certification-prices-hacked-for-black-friday&lt;/a&gt; &lt;br /&gt;
+&lt;h5 id=&quot;burp-suite-certified-practitioner-&quot;&gt;Burp Suite Certified Practitioner \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://portswigger.net/blog/burp-suite-certification-prices-hacked-for-black-friday&quot;&gt;https://portswigger.net/blog/burp-suite-certification-prices-hacked-for-black-friday&lt;/a&gt; &lt;br /&gt;
 November 16 - November 30 2021: The certification exam is on sale for $9. &lt;br /&gt;
 Purchase date - December 15 2021: If you pass your exam before 15 Dec 21, you qualify for a refund&lt;/p&gt;
 
-&lt;p&gt;DroneSec (Drone Cybersec, Threat Intel &amp;amp; Counter-Drone Security Training) :see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://training.dronesec.com/p/Black-Friday-2021&quot;&gt;https://training.dronesec.com/p/Black-Friday-2021&lt;/a&gt;
+&lt;h5 id=&quot;dronesec-drone-cybersec-threat-intel--counter-drone-security-training-see_no_evil&quot;&gt;DroneSec (Drone Cybersec, Threat Intel &amp;amp; Counter-Drone Security Training) :see_no_evil:\&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://training.dronesec.com/p/Black-Friday-2021&quot;&gt;https://training.dronesec.com/p/Black-Friday-2021&lt;/a&gt;
 67% off with code: BFMETAVERSE &lt;br /&gt;
 Ends: 30th November&lt;/p&gt;
 
-&lt;p&gt;LetsDefend - Blue Team Training &lt;br /&gt;
-&lt;a href=&quot;https://letsdefend.io/&quot;&gt;https://letsdefend.io/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;letsdefend---blue-team-training-&quot;&gt;LetsDefend - Blue Team Training \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://letsdefend.io/&quot;&gt;https://letsdefend.io/&lt;/a&gt;&lt;br /&gt;
 50% off code: BLCKFRDY &lt;br /&gt;
 Ends: 30th November&lt;/p&gt;
 
-&lt;p&gt;The Cyber Plumber’s Lab Guide and Access :see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://opsdisk.gumroad.com/l/cphlab/blackfriday2021&quot;&gt;https://opsdisk.gumroad.com/l/cphlab/blackfriday2021&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;the-cyber-plumbers-lab-guide-and-access-&quot;&gt;The Cyber Plumber’s Lab Guide and Access \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://opsdisk.gumroad.com/l/cphlab/blackfriday2021&quot;&gt;https://opsdisk.gumroad.com/l/cphlab/blackfriday2021&lt;/a&gt;&lt;br /&gt;
 (1) 50% off + free handbook (2) 75% off for students&lt;/p&gt;
 
-&lt;p&gt;Eric Diaz (Udemy Hacking Courses) &lt;br /&gt;
-&lt;a href=&quot;https://www.udemy.com/user/eric-daiz/&quot;&gt;https://www.udemy.com/user/eric-daiz/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;eric-daiz-udemy-hacking-courses-&quot;&gt;Eric Daiz (Udemy Hacking Courses) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.udemy.com/user/eric-daiz/&quot;&gt;https://www.udemy.com/user/eric-daiz/&lt;/a&gt;&lt;br /&gt;
 50% off with code: 50OFFNOVEMBER&lt;/p&gt;
 
-&lt;p&gt;Udemy &lt;br /&gt;
-&lt;a href=&quot;https://www.udemy.com/&quot;&gt;https://www.udemy.com/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;udemy-&quot;&gt;Udemy \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.udemy.com/&quot;&gt;https://www.udemy.com/&lt;/a&gt;&lt;br /&gt;
 Most courses $10.99 &lt;br /&gt;
 Ends: 26th November&lt;/p&gt;
 
-&lt;p&gt;PluralSight &lt;br /&gt;
-&lt;a href=&quot;https://www.pluralsight.com/offer/2021/bf-cm-40-off&quot;&gt;https://www.pluralsight.com/offer/2021/bf-cm-40-off&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;pluralsight-&quot;&gt;PluralSight \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.pluralsight.com/offer/2021/bf-cm-40-off&quot;&gt;https://www.pluralsight.com/offer/2021/bf-cm-40-off&lt;/a&gt;&lt;br /&gt;
 40% discount &lt;br /&gt;
 Ends: 29th November&lt;/p&gt;
 
-&lt;p&gt;Robin Dreeke (Social Engineering Training) &lt;br /&gt;
-&lt;a href=&quot;https://www.peopleformula.com/online-training-overview&quot;&gt;https://www.peopleformula.com/online-training-overview&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;robin-dreeke-social-engineering-training-&quot;&gt;Robin Dreeke (Social Engineering Training) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.peopleformula.com/online-training-overview&quot;&gt;https://www.peopleformula.com/online-training-overview&lt;/a&gt;&lt;br /&gt;
 25% off all courses with code: infosec25&lt;/p&gt;
 
-&lt;p&gt;INE (ELearnSecurity Courses) &lt;br /&gt;
-&lt;a href=&quot;https://info.ine.com/black-friday-2021/&quot;&gt;https://info.ine.com/black-friday-2021/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;ine-elearnsecurity-courses-&quot;&gt;INE (ELearnSecurity Courses) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://info.ine.com/black-friday-2021/&quot;&gt;https://info.ine.com/black-friday-2021/&lt;/a&gt;&lt;br /&gt;
 Premium Access Pass for $499 + free eLearnSecurity certification voucher &lt;br /&gt;
 Premium for $599 + Pentester Academy access + free eLearnSecurity certification voucher&lt;/p&gt;
 
-&lt;p&gt;OSINTion (OSINT Training) :see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://www.theosintion.com/courses/store/&quot;&gt;https://www.theosintion.com/courses/store/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;osintion-osint-training-&quot;&gt;OSINTion (OSINT Training) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.theosintion.com/courses/store/&quot;&gt;https://www.theosintion.com/courses/store/&lt;/a&gt;&lt;br /&gt;
 25% off courses with code: BLACKFRIDAY2021&lt;br /&gt;
 15% off bundles with code: BUNDLES2021BLACKFRIDAY&lt;/p&gt;
 
-&lt;p&gt;Security Blue Team &lt;br /&gt;
-&lt;a href=&quot;https://securityblue.team/#black-friday&quot;&gt;https://securityblue.team/#black-friday&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;security-blue-team-&quot;&gt;Security Blue Team \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://securityblue.team/#black-friday&quot;&gt;https://securityblue.team/#black-friday&lt;/a&gt;&lt;br /&gt;
 25% off BTL1 certification &amp;amp; training (£399 –&amp;gt; £299) &lt;br /&gt;
 20% off BTL2 certification &amp;amp; training (£1999 –&amp;gt; £1599) &lt;br /&gt;
 33% off Blue Team Labs Pro subscription (£15/month –&amp;gt; £10/month)
 Ends: 3rd December&lt;/p&gt;
 
-&lt;p&gt;Pensterlab Black friday sale :see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://pentesterlab.com/pro&quot;&gt;https://pentesterlab.com/pro&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;pensterlab-black-friday-sale-&quot;&gt;Pensterlab Black friday sale \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://pentesterlab.com/pro&quot;&gt;https://pentesterlab.com/pro&lt;/a&gt;&lt;br /&gt;
 27% off one year subscription &lt;br /&gt;
 (1) $146 instead of $199 &lt;br /&gt;
 (2) 29.99 instead of 34.99 for students&lt;/p&gt;
 
-&lt;p&gt;The Cyber Mentor (TCM) Security Courses &lt;br /&gt;
-&lt;a href=&quot;https://academy.tcm-sec.com/&quot;&gt;https://academy.tcm-sec.com/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;the-cyber-mentor-tcm-security-courses-&quot;&gt;The Cyber Mentor (TCM) Security Courses \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://academy.tcm-sec.com/&quot;&gt;https://academy.tcm-sec.com/&lt;/a&gt;&lt;br /&gt;
 (1) 50% off all courses (2) 20% off PNPT Certification&lt;/p&gt;
 
-&lt;p&gt;Practical DevSecOps &lt;br /&gt;
-&lt;a href=&quot;https://www.practical-devsecops.com/black-friday/&quot;&gt;https://www.practical-devsecops.com/black-friday/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;practical-devsecops-&quot;&gt;Practical DevSecOps \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.practical-devsecops.com/black-friday/&quot;&gt;https://www.practical-devsecops.com/black-friday/&lt;/a&gt;&lt;br /&gt;
 15% off all courses
 Ends: 26th November&lt;/p&gt;
 
-&lt;p&gt;ISACA InfoSec/GRC Training &lt;br /&gt;
-&lt;a href=&quot;https://www.isaca.org/go/flash&quot;&gt;https://www.isaca.org/go/flash&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;isaca-infosecgrc-training-&quot;&gt;ISACA InfoSec/GRC Training \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.isaca.org/go/flash&quot;&gt;https://www.isaca.org/go/flash&lt;/a&gt;&lt;br /&gt;
 15% off CISA/CISM/CRISC/CGEIT/CDPSE training &amp;amp; cert with code: FLASHSALE15 &lt;br /&gt;
 Ends: 15th December&lt;/p&gt;
 
-&lt;p&gt;International Cybersecurity Institute ICSI&lt;br /&gt;
-&lt;a href=&quot;https://www.icsi.co.uk/&quot;&gt;https://www.icsi.co.uk/&lt;/a&gt;
+&lt;h5 id=&quot;international-cybersecurity-institute-icsi&quot;&gt;International Cybersecurity Institute ICSI\&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.icsi.co.uk/&quot;&gt;https://www.icsi.co.uk/&lt;/a&gt;
 50% off courses releasing 22nd November &lt;br /&gt;
 Ends: 29th November&lt;/p&gt;
 
-&lt;p&gt;CompTIA Courses &lt;br /&gt;
-&lt;a href=&quot;https://www.comptia.org/content/lp/black-friday-preview&quot;&gt;https://www.comptia.org/content/lp/black-friday-preview&lt;/a&gt;
+&lt;h5 id=&quot;comptia-courses-&quot;&gt;CompTIA Courses \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.comptia.org/content/lp/black-friday-preview&quot;&gt;https://www.comptia.org/content/lp/black-friday-preview&lt;/a&gt;
 Unknown discount releasing shortly&lt;/p&gt;
 
-&lt;p&gt;Riot (Phishing simulation training + cybersecurity awareness on Slack) &lt;br /&gt;
-&lt;a href=&quot;https://www.tryriot.com&quot;&gt;https://www.tryriot.com&lt;/a&gt; 
+&lt;h5 id=&quot;riot-phishing-simulation-training--cybersecurity-awareness-on-slack-&quot;&gt;Riot (Phishing simulation training + cybersecurity awareness on Slack) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.tryriot.com&quot;&gt;https://www.tryriot.com&lt;/a&gt; 
 20% off everything with the &lt;strong&gt;BLACKFRIDAY&lt;/strong&gt; code &lt;br /&gt;
 Ends: December 1st&lt;/p&gt;
 
 &lt;h2 id=&quot;mini-course-bundles&quot;&gt;Mini Course Bundles:&lt;/h2&gt;
 
-&lt;p&gt;A to Z Cyber Security Training Bundle (12 courses) &lt;br /&gt;
-&lt;a href=&quot;https://store.boingboing.net/sales/the-a-to-z-cyber-security-it-certification-training-bundle&quot;&gt;https://store.boingboing.net/sales/the-a-to-z-cyber-security-it-certification-training-bundle&lt;/a&gt;&lt;br /&gt;
-$19.97 applied to cart&lt;/p&gt;
+&lt;h5 id=&quot;a-to-z-cyber-security-training-bundle-12-courses-&quot;&gt;A to Z Cyber Security Training Bundle (12 courses) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://store.boingboing.net/sales/the-a-to-z-cyber-security-it-certification-training-bundle&quot;&gt;https://store.boingboing.net/sales/the-a-to-z-cyber-security-it-certification-training-bundle&lt;/a&gt; $19.97 applied to cart&lt;/p&gt;
 
-&lt;p&gt;2022 Ultimate Cybersecurity Analyst Prep Bundle (8 courses) &lt;br /&gt;
-&lt;a href=&quot;https://deals.bleepingcomputer.com/sales/the-2022-ultimate-cybersecurity-analyst-certification-preparation-bundle&quot;&gt;https://deals.bleepingcomputer.com/sales/the-2022-ultimate-cybersecurity-analyst-certification-preparation-bundle&lt;/a&gt;
-$29.99 applied to cart&lt;/p&gt;
+&lt;h5 id=&quot;ultimate-cybersecurity-analyst-prep-bundle-8-courses-&quot;&gt;Ultimate Cybersecurity Analyst Prep Bundle (8 courses) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://deals.bleepingcomputer.com/sales/the-2022-ultimate-cybersecurity-analyst-certification-preparation-bundle&quot;&gt;https://deals.bleepingcomputer.com/sales/the-2022-ultimate-cybersecurity-analyst-certification-preparation-bundle&lt;/a&gt; $29.99 applied to cart&lt;/p&gt;
 
 &lt;h2 id=&quot;hardware&quot;&gt;Hardware:&lt;/h2&gt;
 
-&lt;p&gt;Hak5 hacking hardware for pentesters :see_no_evil::see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://shop.hak5.org/&quot;&gt;https://shop.hak5.org/&lt;/a&gt;
+&lt;h5 id=&quot;hak5-hacking-hardware-for-pentesters-&quot;&gt;Hak5 hacking hardware for pentesters \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://shop.hak5.org/&quot;&gt;https://shop.hak5.org/&lt;/a&gt;
 Huge discounts + free gear&lt;/p&gt;
 
-&lt;p&gt;pcWRT Secure WiFi Router &lt;br /&gt;
-Router with all privacy tools builtin: VLAN, VPN, Ad Block, DoH, Access Control, Monitoring &lt;br /&gt;
+&lt;h5 id=&quot;pcwrt-secure-wifi-router-&quot;&gt;pcWRT Secure WiFi Router \&lt;/h5&gt;
+&lt;p&gt;Router with all privacy tools builtin: VLAN, VPN, Ad Block, DoH, Access Control, Monitoring &lt;br /&gt;
 &lt;a href=&quot;https://www.pcwrt.com/&quot;&gt;https://www.pcwrt.com/&lt;/a&gt;&lt;br /&gt;
 25% off with code: GITHUBBF21&lt;/p&gt;
 
-&lt;p&gt;ifixit (Hardware and electronics equipment) &lt;br /&gt;
-&lt;a href=&quot;https://www.ifixit.com/black-friday-holiday&quot;&gt;https://www.ifixit.com/black-friday-holiday&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;ifixit-hardware-and-electronics-equipment-&quot;&gt;ifixit (Hardware and electronics equipment) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ifixit.com/black-friday-holiday&quot;&gt;https://www.ifixit.com/black-friday-holiday&lt;/a&gt;&lt;br /&gt;
 Multiple discounts applied to cart&lt;/p&gt;
 
-&lt;p&gt;Yubico/Yubikey &lt;br /&gt;
-&lt;a href=&quot;https://www.yubico.com/au/store/black-friday/&quot;&gt;https://www.yubico.com/au/store/black-friday/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;yubicoyubikey-&quot;&gt;Yubico/Yubikey \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.yubico.com/au/store/black-friday/&quot;&gt;https://www.yubico.com/au/store/black-friday/&lt;/a&gt;&lt;br /&gt;
 Various deals released 22nd November&lt;/p&gt;
 
 &lt;h2 id=&quot;clothing&quot;&gt;Clothing:&lt;/h2&gt;
 
-&lt;p&gt;Miscreants Cyber &amp;amp; Security clothing &lt;br /&gt;
-&lt;a href=&quot;https://shopmiscreants.com/&quot;&gt;https://shopmiscreants.com/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;miscreants-cyber--security-clothing-&quot;&gt;Miscreants Cyber &amp;amp; Security clothing \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://shopmiscreants.com/&quot;&gt;https://shopmiscreants.com/&lt;/a&gt;&lt;br /&gt;
 25% off with code: 0x90n&lt;/p&gt;
 
 &lt;h2 id=&quot;books&quot;&gt;Books:&lt;/h2&gt;
 
-&lt;p&gt;Apress Books :see_no_evil:&lt;br /&gt;
-&lt;a href=&quot;https://www.apress.com/us/shop/cybermonday-sale&quot;&gt;https://www.apress.com/us/shop/cybermonday-sale&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;apress-books-&quot;&gt;Apress Books \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.apress.com/us/shop/cybermonday-sale&quot;&gt;https://www.apress.com/us/shop/cybermonday-sale&lt;/a&gt;&lt;br /&gt;
 All print books $9.99 and eBooks $6.99 discount applied to cart&lt;/p&gt;
 
-&lt;p&gt;Humble Bundle (Check back often for InfoSec books - currently only games)&lt;br /&gt;
-&lt;a href=&quot;https://www.humblebundle.com/store/promo/black-friday-sale-2021/&quot;&gt;https://www.humblebundle.com/store/promo/black-friday-sale-2021/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;humble-bundle-check-back-often-for-infosec-books---currently-only-games-&quot;&gt;Humble Bundle (Check back often for InfoSec books - currently only games) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.humblebundle.com/store/promo/black-friday-sale-2021/&quot;&gt;https://www.humblebundle.com/store/promo/black-friday-sale-2021/&lt;/a&gt;&lt;br /&gt;
 Up to 80% off applied to cart&lt;/p&gt;
 
-&lt;p&gt;NoStarch Press &lt;br /&gt;
-&lt;a href=&quot;https://nostarch.com/blog/2021-holiday-gift-guide&quot;&gt;https://nostarch.com/blog/2021-holiday-gift-guide&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;nostarch-press-&quot;&gt;NoStarch Press \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://nostarch.com/blog/2021-holiday-gift-guide&quot;&gt;https://nostarch.com/blog/2021-holiday-gift-guide&lt;/a&gt;&lt;br /&gt;
 Various deals on books applied to cart&lt;/p&gt;
 
 &lt;h2 id=&quot;services&quot;&gt;Services:&lt;/h2&gt;
 
-&lt;p&gt;NordVPN &lt;br /&gt;
-&lt;a href=&quot;https://nordvpn.com/offer/&quot;&gt;https://nordvpn.com/offer/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;nordvpn-&quot;&gt;NordVPN \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://nordvpn.com/offer/&quot;&gt;https://nordvpn.com/offer/&lt;/a&gt;&lt;br /&gt;
 72% discount applied to cart&lt;/p&gt;
 
-&lt;p&gt;Surfshark VPN &lt;br /&gt;
-&lt;a href=&quot;https://surfshark.com/deals&quot;&gt;https://surfshark.com/deals&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;surfshark-vpn-&quot;&gt;Surfshark VPN \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://surfshark.com/deals&quot;&gt;https://surfshark.com/deals&lt;/a&gt;&lt;br /&gt;
 83% off + 3 months free applied to cart&lt;/p&gt;
 
-&lt;p&gt;PureVPN &lt;br /&gt;
-&lt;a href=&quot;https://www.purevpn.com/best-discount-offer?aff=41859&quot;&gt;https://www.purevpn.com/best-discount-offer?aff=41859&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;purevpn-&quot;&gt;PureVPN \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.purevpn.com/best-discount-offer?aff=41859&quot;&gt;https://www.purevpn.com/best-discount-offer?aff=41859&lt;/a&gt;&lt;br /&gt;
 use coupon code: SAVEMORE, 5-year plan 67.96 USD&lt;/p&gt;
 
-&lt;p&gt;Lowendbox - IT/Cloud/Networking sytems &lt;br /&gt;
-&lt;a href=&quot;https://lowendbox.com/blog/what-is-black-friday/&quot;&gt;https://lowendbox.com/blog/what-is-black-friday/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;lowendbox---itcloudnetworking-sytems-&quot;&gt;Lowendbox - IT/Cloud/Networking sytems \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://lowendbox.com/blog/what-is-black-friday/&quot;&gt;https://lowendbox.com/blog/what-is-black-friday/&lt;/a&gt;&lt;br /&gt;
 Variety of deals releasing 24th November&lt;/p&gt;
 
-&lt;p&gt;SimpleLogin &lt;br /&gt;
-&lt;a href=&quot;https://simplelogin.io/pricing/&quot;&gt;https://simplelogin.io/pricing/&lt;/a&gt; &lt;br /&gt;
-$20 first year applied to cart
+&lt;h5 id=&quot;simplelogin-&quot;&gt;SimpleLogin \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://simplelogin.io/pricing/&quot;&gt;https://simplelogin.io/pricing/&lt;/a&gt; $20 first year applied to cart
 Ends: 30th November&lt;/p&gt;
 
-&lt;p&gt;ESET Anti-Virus &lt;br /&gt;
-&lt;a href=&quot;https://www.eset.com/us/cyber-weekend-2021/&quot;&gt;https://www.eset.com/us/cyber-weekend-2021/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;eset-anti-virus-&quot;&gt;ESET Anti-Virus \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.eset.com/us/cyber-weekend-2021/&quot;&gt;https://www.eset.com/us/cyber-weekend-2021/&lt;/a&gt;&lt;br /&gt;
 35% off products applied to cart&lt;/p&gt;
 
-&lt;p&gt;Murus and Vallum (macOS Firewall) &lt;br /&gt;
-&lt;a href=&quot;https://murusfirewall.com/&quot;&gt;https://murusfirewall.com/&lt;/a&gt;&lt;br /&gt;
+&lt;h5 id=&quot;murus-and-vallum-macos-firewall-&quot;&gt;Murus and Vallum (macOS Firewall) \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://murusfirewall.com/&quot;&gt;https://murusfirewall.com/&lt;/a&gt;&lt;br /&gt;
 50% off applied to cart&lt;/p&gt;
 
-&lt;p&gt;MalwareBytes &lt;br /&gt;
-&lt;a href=&quot;https://try.malwarebytes.com/&quot;&gt;https://try.malwarebytes.com/&lt;/a&gt;
+&lt;h5 id=&quot;malwarebytes-&quot;&gt;MalwareBytes \&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://try.malwarebytes.com/&quot;&gt;https://try.malwarebytes.com/&lt;/a&gt;
 60% off Malwarebytes Premium, 50% OFF Malwarebytes Premium + Privacy &lt;br /&gt;
 &lt;a href=&quot;https://try.malwarebytes.com/back-to-business/&quot;&gt;https://try.malwarebytes.com/back-to-business/&lt;/a&gt;&lt;br /&gt;
 25% off Endpoint, Detection and Response products&lt;/p&gt;
@@ -276,7 +269,7 @@ Ends: 30th November&lt;/p&gt;
 &lt;p&gt;If you’d like to DM me a deal rather than submitting a PR: @securitymeta_&lt;/p&gt;
 
 &lt;p&gt;Thanks to 0ldMate referring me to @Infosec_Taylor who has a fantastic twitter thread as well, adding in some of those deals here!
-Also thanks to webyeti, grabbed some deals from: https://www.webyeti.ninja/blog/hackerblkfri - more non-infosec deals in there too.
+Also thanks to webyeti, grabbed some deals from: &lt;a href=&quot;https://www.webyeti.ninja/blog/hackerblkfri&quot;&gt;https://www.webyeti.ninja/blog/hackerblkfri&lt;/a&gt; - more non-infosec deals in there too.
 Shoutout to some discounts grabbed from Dutchosintguy, @gabsmashh
 Thanks to those that have sent pull requests, and @reV_sh_ on twitter, among others.&lt;/p&gt;
 
