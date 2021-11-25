@@ -3,10 +3,10 @@
 	"file": "style.css",
 	"sources": [
 		"style.scss",
-		"../../../../tmp/jekyll-remote-theme-20211125-3834-1m5t0di/_sass/hacker.scss",
-		"../../../../tmp/jekyll-remote-theme-20211125-3834-1m5t0di/_sass/jekyll-theme-hacker.scss",
-		"../../../../tmp/jekyll-remote-theme-20211125-3834-1m5t0di/_sass/rouge-base16-dark.scss",
-		"../../../../tmp/jekyll-remote-theme-20211125-3834-1m5t0di/_sass/_default_colors.scss"
+		"../../../../tmp/jekyll-remote-theme-20211125-3921-1cxx66z/_sass/hacker.scss",
+		"../../../../tmp/jekyll-remote-theme-20211125-3921-1cxx66z/_sass/jekyll-theme-hacker.scss",
+		"../../../../tmp/jekyll-remote-theme-20211125-3921-1cxx66z/_sass/rouge-base16-dark.scss",
+		"../../../../tmp/jekyll-remote-theme-20211125-3921-1cxx66z/_sass/_default_colors.scss"
 	],
 	"sourcesContent": [
 		"@import \"hacker\";",
