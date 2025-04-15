@@ -1,0 +1,112 @@
+---
+layout: post
+title: How to Install Node.js Using NVM on Linux (Including Fish Shell Users)
+date: 2025-04-15 15:17:10 -0300
+categories: nodejs
+tags: nodejs nvm linux fish-shell tutorial
+author: Humberto Jr (bt0)
+---
+
+<p>Managing multiple Node.js versions on your machine shouldn't be a headache.  
+This guide will show you how to install Node.js using NVM (Node Version Manager) — and yes, it works even if you're using Fish Shell!</p>
+
+<h2 id="what-is-nvm">What is NVM?</h2>
+
+<p>NVM (Node Version Manager) allows you to easily install and switch between multiple Node.js versions without messing up your system.</p>
+
+<h2 id="step-1-installing-nvm-bash-or-zsh-users">Step 1 - Installing NVM (Bash or Zsh Users)</h2>
+
+<p>Run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+</code></pre></div></div>
+
+<p>Then load NVM:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+</code></pre></div></div>
+
+<p>Now install Node.js:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 20
+nvm use 20
+</code></pre></div></div>
+
+<p>Check Node version:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node -v
+</code></pre></div></div>
+
+<h2 id="problem-fish-shell-error">Problem: Fish Shell Error</h2>
+
+<p>If you see this error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.nvm/nvm.sh (line 457): Unexpected ')' found, expecting '}'
+*[!/]*/)
+</code></pre></div></div>
+
+<p>That happens because Fish Shell doesn't support some Bash syntax.</p>
+
+<h2 id="solution-install-nvmfish-recommended-for-fish-shell-users">Solution → Install <code>nvm.fish</code> (Recommended for Fish Shell Users)</h2>
+
+<p>Install it like this:</p>
+
+<div class="language-fish highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sL https://git.io/nvm.fish | source
+</code></pre></div></div>
+
+<p>Make it permanent:</p>
+
+<div class="language-fish highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sL https://git.io/nvm.fish | source >> ~/.config/fish/config.fish
+</code></pre></div></div>
+
+<p>Install Node.js:</p>
+
+<div class="language-fish highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install latest
+nvm use latest
+node -v
+</code></pre></div></div>
+
+<h2 id="useful-commands">Useful Commands</h2>
+
+<p>List all available Node.js versions:</p>
+
+<div class="language-fish highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm ls-remote
+</code></pre></div></div>
+
+<p>Install a specific Node.js version:</p>
+
+<div class="language-fish highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm install 18
+</code></pre></div></div>
+
+<p>Use a specific Node.js version:</p>
+
+<div class="language-fish highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm use 18
+</code></pre></div></div>
+
+<p>List installed versions:</p>
+
+<div class="language-fish highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm ls
+</code></pre></div></div>
+
+<p>Set a default version:</p>
+
+<div class="language-fish highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvm use 20 --default
+</code></pre></div></div>
+
+<h2 id="final-result">Final Result</h2>
+
+<p>Now your Node.js environment is ready, organized, and flexible — no matter which terminal you're using.</p>
+
+<p>Happy coding! 🚀</p>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5149953309426611" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-5149953309426611"
+     data-ad-slot="3196203233"></ins>
+<script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
