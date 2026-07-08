@@ -1,18 +1,18 @@
 :root {
   color-scheme: dark;
   --bg: #05080d;
-  --bg-soft: #081018;
-  --panel: rgba(10, 18, 27, 0.82);
-  --panel-strong: rgba(12, 22, 32, 0.94);
-  --line: rgba(136, 228, 255, 0.18);
-  --line-strong: rgba(136, 228, 255, 0.34);
-  --text: #eef7ff;
-  --muted: #9aa8b7;
-  --dim: #657384;
-  --cyan: #00e5ff;
-  --pink: #ff2fb2;
-  --green: #89ffcf;
-  --danger: #ff5c7a;
+  --bg-soft: #071009;
+  --panel: rgba(9, 18, 11, 0.84);
+  --panel-strong: rgba(12, 24, 12, 0.95);
+  --line: rgba(172, 255, 74, 0.18);
+  --line-strong: rgba(172, 255, 74, 0.34);
+  --text: #f4ffe2;
+  --muted: #b8c99c;
+  --dim: #748361;
+  --cyan: #9cff36;
+  --pink: #ffd35a;
+  --green: #c9ff6a;
+  --danger: #ffb24d;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -31,10 +31,10 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    linear-gradient(rgba(0, 229, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px),
-    radial-gradient(circle at 12% 0%, rgba(0, 229, 255, 0.13), transparent 30%),
-    radial-gradient(circle at 88% 8%, rgba(255, 47, 178, 0.09), transparent 26%),
+    linear-gradient(rgba(156, 255, 54, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(156, 255, 54, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 12% 0%, rgba(156, 255, 54, 0.13), transparent 30%),
+    radial-gradient(circle at 88% 8%, rgba(255, 211, 90, 0.10), transparent 26%),
     var(--bg);
   background-size: 34px 34px, 34px 34px, auto, auto, auto;
   color: var(--text);
@@ -85,8 +85,8 @@ a {
   height: 56px;
   border: 1px solid var(--cyan);
   color: var(--cyan);
-  background: rgba(0, 229, 255, 0.05);
-  box-shadow: 0 0 24px rgba(0, 229, 255, 0.12), inset 0 0 20px rgba(0, 229, 255, 0.08);
+  background: rgba(156, 255, 54, 0.06);
+  box-shadow: 0 0 24px rgba(156, 255, 54, 0.14), inset 0 0 20px rgba(156, 255, 54, 0.08);
 }
 
 .brand-mark svg,
@@ -184,7 +184,7 @@ a {
   grid-template-columns: repeat(6, 1fr);
   margin: 24px 0 18px;
   border: 1px solid var(--line-strong);
-  background: rgba(8, 16, 24, 0.72);
+  background: rgba(8, 18, 10, 0.74);
 }
 
 .topic {
@@ -217,7 +217,7 @@ a {
 
 .panel {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(10, 18, 27, 0.84), rgba(5, 10, 16, 0.82));
+  background: linear-gradient(180deg, rgba(9, 18, 11, 0.86), rgba(5, 10, 6, 0.84));
   box-shadow: var(--shadow);
 }
 
@@ -242,9 +242,9 @@ a {
   min-height: 234px;
   border: 1px solid var(--line);
   background:
-    linear-gradient(90deg, rgba(0, 229, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
-    #071019;
+    linear-gradient(90deg, rgba(156, 255, 54, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(156, 255, 54, 0.06) 1px, transparent 1px),
+    #071007;
   background-size: 16px 16px;
   overflow: hidden;
   position: relative;
@@ -266,7 +266,7 @@ a {
   color: var(--cyan);
   font-family: var(--mono);
   font-size: 0.78rem;
-  background: rgba(0, 229, 255, 0.07);
+  background: rgba(156, 255, 54, 0.08);
   padding: 4px 7px;
 }
 
@@ -341,15 +341,15 @@ a {
   place-items: center;
   width: 86px;
   height: 64px;
-  border: 1px solid rgba(0, 229, 255, 0.23);
+  border: 1px solid rgba(156, 255, 54, 0.24);
   color: var(--cyan);
-  background: rgba(0, 229, 255, 0.04);
+  background: rgba(156, 255, 54, 0.045);
 }
 
 .post-row:nth-child(odd) .post-thumb,
 .post-row:nth-child(odd) .post-category {
   color: var(--pink);
-  border-color: rgba(255, 47, 178, 0.28);
+  border-color: rgba(255, 211, 90, 0.30);
 }
 
 .post-row h3 {
@@ -450,7 +450,7 @@ a {
 .track {
   height: 4px;
   margin-top: 7px;
-  background: rgba(136, 228, 255, 0.12);
+  background: rgba(172, 255, 74, 0.13);
 }
 
 .track span {
