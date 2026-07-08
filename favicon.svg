@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cyberpunk security lock">
+  <defs>
+    <linearGradient id="lockBody" x1="12" y1="18" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00f5ff"/>
+      <stop offset="0.52" stop-color="#7c3cff"/>
+      <stop offset="1" stop-color="#ff2bd6"/>
+    </linearGradient>
+    <linearGradient id="shackle" x1="17" y1="6" x2="47" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eaffff"/>
+      <stop offset="0.45" stop-color="#00e5ff"/>
+      <stop offset="1" stop-color="#9f4dff"/>
+    </linearGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="2.6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.00 0 0 0 0 0.90 0 0 0 0 1.00 0 0 0 0.75 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#090b14"/>
+  <path d="M10 50h9M45 50h9M13 43h6M45 43h6M14 57h36" fill="none" stroke="#ff2bd6" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M20 30V20c0-7 5-12 12-12s12 5 12 12v10" fill="none" stroke="url(#shackle)" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
+  <rect x="13" y="27" width="38" height="30" rx="7" fill="url(#lockBody)" filter="url(#glow)"/>
+  <rect x="17" y="31" width="30" height="22" rx="4" fill="#111827" opacity="0.78"/>
+  <path d="M23 38h7l3-4 4 9 3-5h5" fill="none" stroke="#00f5ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="44" r="3.2" fill="#ff2bd6"/>
+  <path d="M32 47v4" stroke="#ff2bd6" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M20 35h5M39 35h5M20 51h5M39 51h5" stroke="#8cfffb" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
+</svg>
