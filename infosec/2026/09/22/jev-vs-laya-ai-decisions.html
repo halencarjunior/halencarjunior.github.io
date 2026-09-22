@@ -1,0 +1,163 @@
+---
+layout: null
+title: "Jev vs. Laya: Bringing AI Decisions into Software"
+date: 2026-09-22 12:00:00 -0300
+categories: infosec
+tags: ai-security decision-models jev laya machine-learning
+author: Humberto Jr (bt0)
+---
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jev vs. Laya: Bringing AI Decisions into Software | bt0's Security Blog</title>
+    <meta name="description" content="A practical comparison of Jev and Laya for typed AI decisions, covering deployment, benchmarks, calibration, security use cases and operational tradeoffs.">
+    <meta name="author" content="Humberto Jr">
+    <meta name="theme-color" content="#05080d">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Jev vs. Laya: Bringing AI Decisions into Software">
+    <meta property="og:description" content="Structured decision models promise faster automation, but choosing between a managed API and open weights requires looking beyond headline benchmarks.">
+    <meta property="article:published_time" content="2026-09-22T12:00:00-03:00">
+    <link rel="icon" type="image/svg+xml" href="../../../../favicon.svg">
+    <link rel="stylesheet" href="../../../../assets/css/modern-template.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell topbar">
+        <a class="brand" href="../../../../index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7l5 5-5 5"/><path d="M13 17h6"/></svg></span><span><h1><span>bt0's</span> Security Blog</h1><p>Field notes for AppSec, AI security, bug bounty and threat intelligence</p></span></a>
+        <nav class="nav" aria-label="Primary navigation"><a class="active" href="../../../../index.html">Home</a><a href="../../../../index.html#archive">Archive</a><a href="../../../../about.html">About</a><a href="../../../../index.html#topics">Resources</a><a href="../../../../index.html#reading-paths">Labs</a></nav>
+        <div class="actions"><div class="search" role="search"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m21 21-4.3-4.3"/><circle cx="11" cy="11" r="7"/></svg><span>Search</span><kbd>/</kbd></div><a class="icon-link" href="https://github.com/halencarjunior" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.2-.4 6.5-1.6 6.5-7A5.4 5.4 0 0 0 19 3.8 5 5 0 0 0 18.9 0S17.7-.4 15 1.5a13.4 13.4 0 0 0-7 0C5.3-.4 4.1 0 4.1 0A5 5 0 0 0 4 3.8 5.4 5.4 0 0 0 2.5 7.5c0 5.4 3.3 6.6 6.5 7a4.8 4.8 0 0 0-1 3.5v4"/><path d="M9 18c-4.5 2-5-2-7-2"/></svg></a><a class="icon-link" href="../../../../feed.xml" aria-label="RSS Feed"><svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg></a></div>
+      </div>
+    </header>
+    <main>
+      <section id="topics" class="topic-strip shell" aria-label="Topics"><a class="topic" href="../../../../infosec/index.html"><span class="topic-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-5"/></svg></span>AppSec</a><a class="topic" href="../../../../infosec/pentest/bugbounty/index.html"><span class="topic-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="2"/></svg></span>Bug Bounty</a><a class="topic" href="../../../../infosec/index.html"><span class="topic-icon"><svg viewBox="0 0 24 24"><path d="M8 8a4 4 0 0 1 8 0v8a4 4 0 0 1-8 0z"/><path d="M12 4v16M8 12H4M20 12h-4"/></svg></span>AI Security</a><a class="topic" href="../../../../infosec/osint/index.html"><span class="topic-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 7v10M7 12h10"/></svg></span>Threat Intel</a><a class="topic" href="../../../../tools/index.html"><span class="topic-icon"><svg viewBox="0 0 24 24"><path d="m14.7 6.3 3 3"/><path d="m5 19 5.8-5.8"/><path d="m19 5-6 6"/><path d="m2 12 4-4M8 2l4 4M22 12l-4 4M16 22l-4-4"/></svg></span>Tools</a><a class="topic" href="../../../../infosec/pentest/writeup/index.html"><span class="topic-icon"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></span>Writeups</a></section>
+      <div class="article-shell">
+        <article class="panel article-card">
+          <header class="article-header">
+            <p class="section-title">infosec / ai security / decision models</p>
+            <h1>Jev vs. Laya: Bringing AI Decisions into Software</h1>
+            <p class="article-deck">Structured decision models promise faster automation. Comparing TypeSafe's API with an open-weight alternative requires looking beyond headline benchmarks.</p>
+            <div class="article-meta"><span>Sep 22, 2026</span><span>Humberto Jr (bt0)</span><span>infosec / AI security</span></div>
+          </header>
+          <div class="article-content">
+            <p>An alert arrives at a security operations center. Before anyone writes a report, the team needs to categorize the event, assess its urgency and assign it to the right analyst. These small decisions, repeated thousands of times, illustrate the opportunity behind <a href="https://typesafe.ai/">Jev</a> and <a href="https://huggingface.co/convaiinnovations/laya">Laya</a>: incorporating AI judgments directly into software workflows.</p>
+
+            <p>Both projects describe themselves as System One decision models. They receive context and questions with constrained answer spaces, then return values an application can consume. For developers building automation, that raises a practical question: how much of a workflow actually needs generated text, and how much could run on well-defined decisions?</p>
+
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5149953309426611" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5149953309426611" data-ad-slot="3196203233"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+            <h2 id="two-approaches-to-typed-decisions">Two Approaches to Typed Decisions</h2>
+
+            <p>Jev, from TypeSafe, exposes three primitives: <code>Choice</code>, for selecting an option; <code>Score</code>, for evaluating a scale; and <code>Noul</code>, for estimating whether a statement is true. Multiple questions can share the same context while being evaluated independently. The <a href="https://docs.typesafe.ai/primitives">Jev documentation</a> recommends breaking larger problems into individual judgments and combining their results in code.</p>
+
+            <p>For a security application, that could mean asking separate questions about signs of phishing, requests for credentials and the need for human review. This is an architectural example, not a demonstrated security capability in this article. The application would still determine which actions each combination of answers permits.</p>
+
+            <p>TypeSafe describes a training method called Reinforcement Learning for Calibrated Decisions, or RLCD. The company reports latency in the 70-500 millisecond range and lists Jev 1.13 at $0.042 per million input tokens, with no output-token charge. These are vendor-published figures and terms, subject to change; current pricing should be checked in the <a href="https://docs.typesafe.ai/models">official model documentation</a>.</p>
+
+            <p>Laya, from Convai Innovations, offers weights under the Apache 2.0 license and supports deployment on your own infrastructure. Its family includes an English checkpoint based on ModernBERT, a <a href="https://huggingface.co/convaiinnovations/laya-multilingual">multilingual checkpoint</a> based on mmBERT and a <a href="https://huggingface.co/convaiinnovations/laya-typed-decisions">checkpoint specialized for typed decisions</a>. The project also describes RLCD training. Using the same name, however, does not establish equivalent implementations or behavior.</p>
+
+            <div class="table-wrap" role="region" aria-label="Jev and Laya operational comparison" tabindex="0">
+              <table>
+                <thead><tr><th>Dimension</th><th>Jev</th><th>Laya</th></tr></thead>
+                <tbody>
+                  <tr><td>Documented access</td><td>Proprietary API</td><td>Open weights and SDK for self-hosting</td></tr>
+                  <tr><td>Interface</td><td>State and typed questions</td><td>State and typed questions, with multiple checkpoints</td></tr>
+                  <tr><td>Inference operations</td><td>Provided by TypeSafe</td><td>Managed by the deploying organization</td></tr>
+                  <tr><td>Adaptation work</td><td>Evaluate the API against the intended tasks</td><td>Select, evaluate and potentially fine-tune a checkpoint</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>This operational difference matters. An API can reduce the work of maintaining inference infrastructure. Self-hosting provides control over where data is processed, but requires operational capacity. Hardware, power, availability, monitoring and maintenance all belong in the cost model. Free weights do not mean zero operating costs.</p>
+
+            <h2 id="benchmarks-need-context">Benchmarks Need Context</h2>
+
+            <p>Performance claims require particular care. The <a href="https://github.com/NandhaKishorM/laya/blob/main/BENCHMARKS.md">Laya benchmark report</a> explicitly states that its Jev figures come from third-party publications with different samples and prompts. The authors did not run Jev in that evaluation because they lacked API access. The table provides leads for further investigation, rather than a controlled comparison.</p>
+
+            <p>The report lists 76.6% accuracy for Laya and 72.7% for Jev on <code>typed-decisions</code>. Laya's model card explains that its result belongs to a checkpoint fine-tuned on that benchmark's training split. The base checkpoints fall below the 46.1% majority-class baseline, which always selects the most frequent class. The headline score therefore cannot be treated as general capability on unfamiliar tasks.</p>
+
+            <p>The latency comparison also combines different conditions: approximately 32.8 milliseconds for the Laya multilingual checkpoint on a T4 GPU and published measurements of 236-276 milliseconds for Jev. Local inference and a remote service request include different components. For an architecture decision, I would measure the complete request path, including input preparation, network time, queues and response processing.</p>
+
+            <blockquote>
+              <p><strong>Benchmark takeaway:</strong> these numbers are useful hypotheses, not a winner's podium. The models were not evaluated under one controlled protocol in the cited comparison.</p>
+            </blockquote>
+
+            <h2 id="valid-output-is-not-a-correct-answer">Valid Output Is Not a Correct Answer</h2>
+
+            <p>The promise of avoiding hallucinations needs equally precise interpretation. TypeSafe connects that claim to constrained, typed output rather than generated prose. Returning an allowed option does not establish that the option is correct. A classifier can label a malicious message <em>legitimate</em> while producing a perfectly valid response.</p>
+
+            <p>Confidence deserves the same scrutiny. TypeSafe's documentation explains that the confidence field for <code>Choice</code> and <code>Score</code> is calculated from the probability distribution. It should not automatically be read as an empirically established accuracy rate on a company's data. Decision thresholds must be tested within the intended domain.</p>
+
+            <p>Laya's limitations section acknowledges overconfidence and recommends recalibration on your own data. It also directs users to the multilingual variant for languages other than English. Those details matter before a high probability becomes the basis for authorizing an action.</p>
+
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5149953309426611" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5149953309426611" data-ad-slot="3196203233"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+            <h2 id="which-one-should-a-team-evaluate">Which One Should a Team Evaluate?</h2>
+
+            <p>My assessment is that the choice should begin with the task and operating constraints. Jev is worth evaluating when the priority is consuming decisions through an API and concentrating development effort on the application. Laya is worth evaluating when self-hosting matters and the team can test, specialize and maintain the models. Neither deployment model removes the need to measure decision quality.</p>
+
+            <div class="table-wrap" role="region" aria-label="Decision model selection guide" tabindex="0">
+              <table>
+                <thead><tr><th>Priority</th><th>Stronger starting point</th><th>Reason</th></tr></thead>
+                <tbody>
+                  <tr><td>Minimal inference operations</td><td>Jev</td><td>The managed API keeps model serving outside the application team.</td></tr>
+                  <tr><td>Data locality and infrastructure control</td><td>Laya</td><td>Open weights can run inside infrastructure you manage.</td></tr>
+                  <tr><td>Fast domain experimentation</td><td>Depends</td><td>Jev simplifies API evaluation; Laya exposes fine-tuning and calibration.</td></tr>
+                  <tr><td>High-impact automated actions</td><td>Neither by default</td><td>Both require domain tests, policy gates and an escalation path.</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="a-security-focused-pilot">A Security-Focused Pilot</h2>
+
+            <p>For a cybersecurity pilot, I would use reviewed historical examples, keeping training, calibration and test sets separate. I would compare both systems with existing rules and classifiers, measuring:</p>
+
+            <ul>
+              <li>False positives and false negatives by decision type.</li>
+              <li>Calibration and coverage at each proposed automation threshold.</li>
+              <li>End-to-end latency under realistic concurrency and payload sizes.</li>
+              <li>Cost per useful decision, including infrastructure and human review.</li>
+              <li>Behavior on ambiguous, multilingual and out-of-distribution inputs.</li>
+              <li>Resistance to prompt injection and classification manipulation.</li>
+            </ul>
+
+            <p>Higher-impact actions should remain subject to explicit policies and appropriate review. In a SOC workflow, for example, a model might enrich or route an alert while a deterministic policy decides whether containment is allowed.</p>
+
+            <h2 id="conclusion">Conclusion</h2>
+
+            <p>Jev and Laya make AI integration into short, recurring decisions more tangible. Their value depends on whether a team can define the question, measure the errors and control what happens after the answer. In production, a well-formed output is only the beginning of that work.</p>
+
+            <blockquote>
+              <p><strong>Editorial note:</strong> This is a documentation-based analysis of the sources below, accessed on September 22, 2026. No independent tests were performed. The cited results were published or reproduced by the respective projects and do not establish universal superiority for either system.</p>
+            </blockquote>
+
+            <h2 id="references">References</h2>
+
+            <ul>
+              <li><a href="https://typesafe.ai/">TypeSafe AI - Jev overview and RLCD positioning</a></li>
+              <li><a href="https://docs.typesafe.ai/primitives">TypeSafe AI - Jev primitives documentation</a></li>
+              <li><a href="https://docs.typesafe.ai/models">TypeSafe AI - Jev models and pricing documentation</a></li>
+              <li><a href="https://docs.typesafe.ai/confidence">TypeSafe AI - Confidence documentation</a></li>
+              <li><a href="https://huggingface.co/convaiinnovations/laya">Convai Innovations - Laya model family</a></li>
+              <li><a href="https://huggingface.co/convaiinnovations/laya-multilingual">Convai Innovations - Laya multilingual model card</a></li>
+              <li><a href="https://huggingface.co/convaiinnovations/laya-typed-decisions">Convai Innovations - Laya typed-decisions model card</a></li>
+              <li><a href="https://github.com/NandhaKishorM/laya/blob/main/BENCHMARKS.md">Laya benchmark report and limitations</a></li>
+            </ul>
+          </div>
+        </article>
+        <aside class="article-rail" aria-label="Article sidebar">
+          <section class="panel rail-card"><h2 class="section-title">Article Map</h2><ul class="rail-list"><li><a href="#two-approaches-to-typed-decisions">Two approaches</a></li><li><a href="#benchmarks-need-context">Benchmark context</a></li><li><a href="#valid-output-is-not-a-correct-answer">Output vs. correctness</a></li><li><a href="#a-security-focused-pilot">Security pilot</a></li></ul></section>
+          <section class="panel rail-card"><h2 class="section-title">Tags</h2><ul class="rail-list"><li>AI security</li><li>decision models</li><li>Jev</li><li>Laya</li><li>calibration</li></ul></section>
+          <section class="panel rail-card"><h2 class="section-title">Navigation</h2><ul class="rail-list"><li><a href="../../../../index.html">Back to home</a></li><li><a href="../../../../infosec/index.html">Infosec articles</a></li><li><a href="../../../../feed.xml">RSS feed</a></li></ul></section>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer"><div class="shell">bt0's Security Blog // AppSec, AI security, bug bounty, threat intelligence and secure development.</div></footer>
+  </body>
+</html>

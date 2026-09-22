@@ -525,6 +525,7 @@ a {
 }
 
 .article-card {
+  min-width: 0;
   padding: clamp(22px, 4vw, 46px);
 }
 
@@ -550,6 +551,14 @@ a {
   color: var(--muted);
   font-family: var(--mono);
   font-size: 0.86rem;
+}
+
+.article-deck {
+  max-width: 72ch;
+  margin: 16px 0 20px;
+  color: #c7d8ad;
+  font-size: 1.08rem;
+  line-height: 1.65;
 }
 
 .article-content {
@@ -625,6 +634,17 @@ a {
   border-collapse: collapse;
   margin: 22px 0;
   font-size: 0.94rem;
+}
+
+.article-content .table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 22px 0;
+}
+
+.article-content .table-wrap table {
+  margin: 0;
+  min-width: 640px;
 }
 
 .article-content th,
