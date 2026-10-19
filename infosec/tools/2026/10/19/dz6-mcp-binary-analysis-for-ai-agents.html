@@ -1,0 +1,158 @@
+---
+layout: null
+title: "dz6-mcp: Bringing a Terminal Hex Editor to AI Agents"
+date: 2026-10-19 12:00:00 -0300
+categories: infosec tools
+tags: dz6 mcp reverse-engineering binary-analysis hex-editor ai-security
+author: Humberto Jr (bt0)
+---
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dz6-mcp: Bringing a Terminal Hex Editor to AI Agents | bt0's Security Blog</title>
+    <meta name="description" content="How dz6-mcp exposes Mente Binaria's dz6 hex editor to MCP clients for binary triage, PE and ELF inspection, signature scanning, annotations and staged byte edits.">
+    <meta name="author" content="Humberto Jr">
+    <meta name="theme-color" content="#05080d">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="dz6-mcp: Bringing a Terminal Hex Editor to AI Agents">
+    <meta property="og:description" content="A practical look at dz6 and the MCP server that makes its byte-level analysis available to AI agents.">
+    <meta property="article:published_time" content="2026-10-19T12:00:00-03:00">
+    <link rel="icon" type="image/svg+xml" href="../../../../../favicon.svg">
+    <link rel="stylesheet" href="../../../../../assets/css/modern-template.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5149953309426611" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell topbar">
+        <a class="brand" href="../../../../../index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7l5 5-5 5"/><path d="M13 17h6"/></svg></span><span><h1><span>bt0's</span> Security Blog</h1><p>Field notes for AppSec, AI security, bug bounty and threat intelligence</p></span></a>
+        <nav class="nav" aria-label="Primary navigation"><a class="active" href="../../../../../index.html">Home</a><a href="../../../../../index.html#archive">Archive</a><a href="../../../../../about.html">About</a><a href="../../../../../index.html#topics">Resources</a><a href="../../../../../index.html#reading-paths">Labs</a></nav>
+        <div class="actions"><div class="search" role="search"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m21 21-4.3-4.3"/><circle cx="11" cy="11" r="7"/></svg><span>Search</span><kbd>/</kbd></div><a class="icon-link" href="https://github.com/halencarjunior" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.2-.4 6.5-1.6 6.5-7A5.4 5.4 0 0 0 19 3.8 5 5 0 0 0 18.9 0S17.7-.4 15 1.5a13.4 13.4 0 0 0-7 0C5.3-.4 4.1 0 4.1 0A5 5 0 0 0 4 3.8 5.4 5 0 0 0 2.5 7.5c0 5.4 3.3 6.6 6.5 7a4.8 4.8 0 0 0-1 3.5v4"/><path d="M9 18c-4.5 2-5-2-7-2"/></svg></a><a class="icon-link" href="../../../../../feed.xml" aria-label="RSS Feed"><svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg></a></div>
+      </div>
+    </header>
+    <main>
+      <section id="topics" class="topic-strip shell" aria-label="Topics"><a class="topic" href="../../../../../infosec/index.html">AppSec</a><a class="topic" href="../../../../../infosec/pentest/bugbounty/index.html">Bug Bounty</a><a class="topic" href="../../../../../infosec/index.html">AI Security</a><a class="topic" href="../../../../../infosec/osint/index.html">Threat Intel</a><a class="topic" href="../../../../../tools/index.html">Tools</a><a class="topic" href="../../../../../infosec/pentest/writeup/index.html">Writeups</a></section>
+      <div class="article-shell">
+        <article class="panel article-card">
+          <header class="article-header">
+            <p class="section-title">infosec / tools / binary analysis</p>
+            <h1>dz6-mcp: Bringing a Terminal Hex Editor to AI Agents</h1>
+            <p class="article-deck">A look at the dz6 editor by Mente Binaria and the MCP server I built to make its byte-level workflows available to AI assistants.</p>
+            <div class="article-meta"><span>Oct 19, 2026</span><span>Humberto Jr (bt0)</span><span>infosec / tools</span></div>
+          </header>
+          <div class="article-content">
+            <figure class="project-identity"><img src="../../../../../assets/img/dz6-mcp.png" alt="dz6-mcp project logo" width="2170" height="725" loading="eager"><figcaption>dz6-mcp connects the dz6 binary editor to MCP clients.</figcaption></figure>
+
+            <p>When I inspect an unfamiliar executable, I want the exact bytes to stay close to the analysis. An assistant can summarize a PE header or point me toward a suspicious section, but it needs a reliable way to read offsets, inspect structures and verify what is actually on disk. That was the motivation for <a href="https://github.com/halencarjunior/dz6-mcp">dz6-mcp</a>, an MCP server I developed around <a href="https://github.com/mentebinaria/dz6">dz6 by Mente Binaria</a>.</p>
+
+            <p>The two projects have distinct roles. dz6 remains the interactive terminal hex editor. dz6-mcp exposes its engine as structured tools that an MCP client can call. The server does not perform autonomous reverse engineering: it gives an agent access to bytes, parsed metadata, searches and controlled edits, while the analyst evaluates the results.</p>
+
+            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5149953309426611" data-ad-slot="3196203233"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+            <h2 id="what-dz6-provides">What dz6 Provides</h2>
+
+            <p><a href="https://github.com/mentebinaria/dz6#features">dz6</a> is a fast, Vim-inspired hex editor for the terminal. Its TUI can navigate large files, edit hex or ASCII, search text and byte patterns, inspect strings, and attach comments, bookmarks and colored blocks. It also parses basic PE and ELF headers. For an analyst working by hand, these features put file structure and individual bytes in one place.</p>
+
+            <p>The upstream command line is straightforward: <code>dz6 --readonly sample.bin</code> opens a file without editing it; <code>dz6 --offset 400 sample.bin</code> starts at an offset, interpreted as hexadecimal by default. Inside the editor, searches, bookmarks and the header view help move between raw data and executable structure. The dz6 README documents its <a href="https://github.com/mentebinaria/dz6#usage">command line and key bindings</a>.</p>
+
+            <h2 id="what-the-mcp-server-adds">What the MCP Server Adds</h2>
+
+            <p><a href="https://github.com/halencarjunior/dz6-mcp/blob/main/README.md">dz6-mcp</a> runs locally and speaks JSON-RPC over standard input and output. It reuses dz6 as a Rust library rather than scripting the TUI. Each MCP session can keep multiple files open; a tool call containing a <code>path</code> opens that file lazily and reuses its state on later calls. Protocol messages use stdout, while diagnostics go to stderr.</p>
+
+            <p>The current server advertises 39 tools. They cover file state, byte and string reads, search, signature scanning, PE/ELF inspection, address translation, staged editing, annotations and diagnostics. The table shows where the TUI and the MCP layer meet.</p>
+
+            <div class="table-wrap" role="region" aria-label="dz6 and dz6-mcp comparison" tabindex="0">
+              <table>
+                <thead><tr><th>Task</th><th>dz6 TUI</th><th>dz6-mcp</th></tr></thead>
+                <tbody>
+                  <tr><td>Inspect bytes</td><td>Navigate the hex and text views</td><td><code>read_bytes</code>, <code>read_int</code>, <code>read_string</code></td></tr>
+                  <tr><td>Find evidence</td><td>Interactive text/hex search and string list</td><td><code>search</code>, <code>search_all</code>, <code>pattern_scan</code>, <code>strings</code></td></tr>
+                  <tr><td>Understand executables</td><td>PE/ELF header view</td><td><code>headers</code>, <code>sections</code>, <code>symbols</code>, <code>pe_info</code>, <code>elf_info</code></td></tr>
+                  <tr><td>Navigate addresses</td><td>Jump to offsets and header fields</td><td><code>address_translate</code>, <code>read_at_address</code></td></tr>
+                  <tr><td>Record findings</td><td>Comments, bookmarks and colored blocks</td><td>Annotation tools that share the <code>.dz6</code> sidecar</td></tr>
+                  <tr><td>Change bytes</td><td>Interactive editing and write commands</td><td><code>write_bytes</code>, <code>fill</code>, <code>undo</code>, <code>save</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>For PE and ELF work, the MCP layer goes further than a raw hex dump: it can return sections and symbols, translate virtual addresses to file offsets, inspect PE imports and metadata, or report ELF interpreter, dependencies and notes. Signature scanning supports named patterns with byte and nibble wildcards, gaps and alternation. These are useful for triage; any interpretation still needs validation against the original file and other analysis tools.</p>
+
+            <h2 id="build-and-connect">Build and Connect</h2>
+
+            <p>The current release builds against a sibling checkout of dz6. Upstream dz6 is currently a binary crate; dz6-mcp includes a patch that exposes its modules as a library and keeps terminal output away from the MCP protocol stream. The patch is tied to the dz6 commit shown below. Use fresh sibling checkouts and <a href="https://github.com/halencarjunior/dz6-mcp#requirements">check the project README</a> for changes before building.</p>
+
+            <pre><code>git clone https://github.com/halencarjunior/dz6-mcp.git
+git clone https://github.com/mentebinaria/dz6.git
+git -C dz6 checkout --detach 9612897db2b0c5ec75ea92285b183e1062ba9af9
+git -C dz6 apply --check ../dz6-mcp/patches/dz6-library.patch
+git -C dz6 apply ../dz6-mcp/patches/dz6-library.patch
+cd dz6-mcp
+cargo build --release --locked</code></pre>
+
+            <p>The README specifies Rust 1.89 or newer. The MCP client's command must point to the built executable, not its parent directory. A minimal read-oriented client configuration is:</p>
+
+            <pre><code>{
+  "mcpServers": {
+    "dz6": {
+      "command": "/absolute/path/to/dz6-mcp/target/release/dz6-mcp",
+      "args": ["--readonly"]
+    }
+  }
+}</code></pre>
+
+            <p>Client configuration formats vary. The repository documents setups for several harnesses, including Codex, Claude, OpenCode and generic MCP clients. Reconnect the client after changing the binary or its tool list.</p>
+
+            <h2 id="a-practical-triage-session">A Practical Triage Session</h2>
+
+            <p>Suppose an unknown file arrives as <code>/samples/unknown.bin</code>. I would begin with bounded, read-only calls and let the evidence determine the next step. These are example MCP tool calls, not output from a tested sample:</p>
+
+            <pre><code>file_info    {"path":"/samples/unknown.bin"}
+read_bytes   {"path":"/samples/unknown.bin","offset":0,"length":128}
+analyze      {"path":"/samples/unknown.bin"}
+strings      {"path":"/samples/unknown.bin","min_length":6,"max":100}
+pattern_scan {"path":"/samples/unknown.bin","patterns":[
+  {"name":"pe-mz","pattern":"4D5A"},
+  {"name":"elf","pattern":"7F454C46"}
+]}</code></pre>
+
+            <p>If the file is a valid PE or ELF executable, I can ask for <code>sections</code> and the matching <code>pe_info</code> or <code>elf_info</code>. A section with unusual entropy is a lead, not proof of packing or encryption. If a disassembler reports a virtual address, <code>address_translate</code> maps it to a file offset, and <code>read_at_address</code> verifies the bytes there. On a malformed file, the raw read and search tools remain useful even if structural parsing fails.</p>
+
+            <p>For a controlled patch on a copy, <code>write_bytes</code> stages changes in memory. <code>read_bytes</code> then shows the proposed bytes, <code>undo</code> can reverse them, and <code>save</code> writes them to disk. Comments and bookmarks persist in the same <code>&lt;file&gt;.dz6</code> TOML sidecar used by the TUI. The <a href="https://github.com/halencarjunior/dz6-mcp#workflows">documented workflows</a> include PE and ELF triage, signature scanning and patch verification.</p>
+
+            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5149953309426611" data-ad-slot="3196203233"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+            <h2 id="important-boundaries">Important Boundaries</h2>
+
+            <p>The server is a local file tool, so its permissions follow the process that runs it. It has no path sandbox. <code>--readonly</code> sets the default for opening documents, but a client can request <code>open_file</code> with <code>readonly: false</code>; <code>dump</code> can still write a separate output file. Run it with a least-privilege account, use copies of important samples and review a client's tool permissions before granting edit access.</p>
+
+            <p>Edits are visible to byte reads, search, pattern scans and entropy analysis before <code>save</code>. Structural parsers and the <code>strings</code> tool inspect the on-disk mapping, so they do not reflect staged edits until a save or reopen. <code>truncate</code> is different again: it changes the file immediately and cannot be undone. <code>save</code> does not create a backup. These behaviors are documented in the project's <a href="https://github.com/halencarjunior/dz6-mcp#core-concepts">core concepts</a> and <a href="https://github.com/halencarjunior/dz6-mcp#security">security notes</a>.</p>
+
+            <p>Finally, bytes and extracted strings are untrusted data. A file may contain text that looks like instructions for an AI assistant. Treat it as sample content, not as a command to execute or a policy to follow.</p>
+
+            <h2 id="where-it-fits">Where It Fits</h2>
+
+            <p>dz6 is the hands-on editor I can use to inspect and annotate a file in the terminal. dz6-mcp makes the same underlying work available as structured operations inside an agent workflow. That pairing is especially useful when an investigation moves repeatedly between hypotheses, exact offsets and reproducible evidence. The agent can help organize the process; the bytes, the analyst and the explicit save step remain the source of truth.</p>
+
+            <h2 id="sources">Sources</h2>
+            <ul>
+              <li><a href="https://github.com/mentebinaria/dz6">Mente Binaria: dz6 source and documentation</a></li>
+              <li><a href="https://github.com/halencarjunior/dz6-mcp">Humberto Jr: dz6-mcp source and documentation</a></li>
+              <li><a href="https://github.com/halencarjunior/dz6-mcp/blob/main/patches/dz6-library.patch">dz6-mcp library patch for the pinned dz6 commit</a></li>
+            </ul>
+            <p><small>Project capabilities and installation steps were reviewed from the repositories on October 19, 2026. The example triage session is illustrative; no performance benchmark or malware analysis is claimed.</small></p>
+          </div>
+        </article>
+        <aside class="article-rail" aria-label="Article sidebar">
+          <section class="panel rail-card"><h2 class="section-title">Article Map</h2><ul class="rail-list"><li><a href="#what-dz6-provides">dz6 editor</a></li><li><a href="#what-the-mcp-server-adds">MCP capabilities</a></li><li><a href="#build-and-connect">Build and connect</a></li><li><a href="#a-practical-triage-session">Triage session</a></li><li><a href="#important-boundaries">Boundaries</a></li></ul></section>
+          <section class="panel rail-card"><h2 class="section-title">Projects</h2><ul class="rail-list"><li><a href="https://github.com/mentebinaria/dz6">dz6 by Mente Binaria</a></li><li><a href="https://github.com/halencarjunior/dz6-mcp">dz6-mcp on GitHub</a></li></ul></section>
+          <section class="panel rail-card"><h2 class="section-title">Navigation</h2><ul class="rail-list"><li><a href="../../../../../index.html">Back to home</a></li><li><a href="../../../../../tools/index.html">More tools</a></li><li><a href="../../../../../feed.xml">RSS feed</a></li></ul></section>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer"><div class="shell">bt0's Security Blog // AppSec, AI security, bug bounty, threat intelligence and secure development.</div></footer>
+  </body>
+</html>

@@ -257,6 +257,20 @@ a {
   height: 100%;
 }
 
+.featured-visual--project {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #e6f0db;
+}
+
+.featured-visual--project img {
+  display: block;
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
 .featured-content {
   padding: 18px 0;
 }
@@ -606,6 +620,26 @@ a {
   height: auto;
   border: 1px solid var(--line);
   background: rgba(0, 0, 0, 0.2);
+}
+
+.article-content .project-identity {
+  margin: 0 0 30px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: #e6f0db;
+}
+
+.article-content .project-identity img {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.article-content .project-identity figcaption {
+  margin-top: 10px;
+  color: #293b27;
+  font-size: 0.8rem;
 }
 
 .article-content pre,
